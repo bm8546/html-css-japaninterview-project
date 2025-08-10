@@ -1,0 +1,91 @@
+@charset "utf-8";
+/*
+----------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* HEADER
+----------------------- */
+header {
+  height: 80px;
+  position: relative;
+}
+.nav-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* 항목 사이 간격 */
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav-menu a:hover {
+  color: #007acc; /* 마우스 올렸을 때 색상 */
+}
+/* FOOTER
+----------------------- */
+.program-footer {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-copy {
+  margin: 0;
+}
+
+.footer-warning {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.footer-warning .text-danger {
+  color: #d33;
+  font-weight: bold;
+}
+
+.footer-contact {
+  margin: 0;
+}
+
+.footer-contact a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}

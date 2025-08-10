@@ -1,0 +1,104 @@
+/* INTERVIEW
+----------------------- */
+.interview-main {
+  max-width: 65%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.interview-topics {
+  background-color: rgb(235, 235, 235);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+.interview-topics button.topics-toggle {
+  background: none;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.interview-topics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* 기본은 숨김 */
+}
+
+.interview-topics li {
+  margin-bottom: 10px;
+}
+
+.interview-topics a {
+  color: black;
+  text-decoration: none;
+}
+.interview-topics a:hover {
+  text-decoration: underline;
+}
+.interview-topics ul.show {
+  display: block; /* 버튼 클릭 시 보여주기 */
+}
+/* 인터뷰 콘텐츠 article */
+.interview-contents figure {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem 0 1rem;
+  border-left: 4px solid #0066cc;
+  padding-left: 0.75rem;
+  color: #007acc;
+}
+.interview-contents p {
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+/* 고정버튼 스타일 */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+.floating-btn button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+/* 목차 모달 스타일 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
