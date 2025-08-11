@@ -1,5 +1,3 @@
-# html-css-japaninterview-project
-
 # 청해진 일본IT프로젝트 - 現在、ドウですか？
 
 ## 📌 프로젝트 개요

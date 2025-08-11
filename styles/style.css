@@ -20,32 +20,55 @@ ul {
 }
 /* HEADER
 ----------------------- */
-header {
-  height: 80px;
-  position: relative;
+.logo {
+  width: 150px;
+  margin-top: 12px;
+  margin-left: 20px; /*왼쪽 여백*/
 }
-.nav-menu {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.nav-menu ul {
-  list-style: none;
+.main-nav {
   display: flex;
-  gap: 20px; /* 항목 사이 간격 */
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
 }
 
-.nav-menu a {
+nav {
+  padding: 0 40px; /* 좌우에 40px 여백 */
+}
+
+.main-nav li {
+  margin-left: 36px;
+}
+
+.main-nav a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 16px;
+  color: black;
+  transition: color 0.3s;
 }
 
-.nav-menu a:hover {
-  color: #007acc; /* 마우스 올렸을 때 색상 */
+/* 여기에 마우스를 올렸을 때의 스타일 지정 */
+.profile:hover {
+  color: #bd20ed;
 }
+
+.introduction:hover {
+  color: #5034db;
+}
+
+.interview:hover {
+  color: #f10bcb;
+}
+
+.appreciation:hover {
+  color: #f39c12;
+}
+
+.page-header {
+  display: flex; /*네비 수평정렬*/
+  justify-content: space-between; /*양쪽끝에 붙이기*/
+}
+
 /* FOOTER
 ----------------------- */
 .program-footer {
