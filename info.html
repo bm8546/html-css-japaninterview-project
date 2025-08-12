@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>現在、ドウですか？:Info</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/Info_style.css"/>
+
+    <!-- font awesome(icon) -->
+    <script
+      src="https://kit.fontawesome.com/f3d3ae9b3b.js"
+      crossorigin="anonymous"
+    ></script>
+    
+
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="index.html">
+        <img class="logo" src="images/KakaoTalk_20250812_143959303.png" alt="로고 이미지" />
+      </a>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="profile.html" class="profile">Profile</a></li>
+          <li>
+            <a href="info.html" class="AboutUs">About Us</a>
+          </li>
+
+          <li><a href="interview.html" class="interview">interview</a></li>
+        </ul>
+      </nav>
+    </header>
+
+   <div id="info" class="AboutUs">
+    <section class="title-wrapper">
+      <h1 class="page-title">About Us</h1>
+      <p class="page-subtitle">저희 팀을 소개합니다.</p>
+    </section>
+
+  <main>
+    <section class="team-intro">
+      <div class="intro-text">
+        <h2 class="team-name">現在、ドウですか？</h2>
+        <p>
+          チーム名「<strong>現在、ドウですか？</strong>」には、2つの意味が込められています。<br />
+          一つ目は、インタビューを行った<strong>加藤さんの現在の様子</strong>を尋ねる言葉。<br />
+          二つ目は、<strong>海外就職や海外生活を目指す私たちの今</strong>を問いかける言葉です。<br /><br />
+          本プロジェクトでは、加藤さんの経験を通して、<strong>海外で働くこと・暮らすこと</strong>に関する実際の声を伝えることを目的としています。<br />
+          そのお話は、私たち3人だけでなく、現在<strong>「青海進プログラム」本課程</strong>に参加している全てのメンバーにとっても意味のある内容です。
+</p>
+      </div>
+      <div class="intro-image">
+        <img src="images/001feebcaf9599f8.png" alt="팀 대표 이미지" />
+      </div>
+    </section>
+
+  <section class="team-members">
+  <h2 class="members-title">Our Members</h2>
+   <div class="member-grid">
+  <!-- 팀원 1 -->
+  <div class="member-card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="images/소개1.png" alt="사진" class="member-photo" />
+        <h3 class="member-name">김현재</h3>
+        <p class="member-role">팀 리더</p>
+        <p class="member-desc">2024학번</p>
+      </div>
+      <div class="card-back">
+        <h3>프로젝트 감상</h3>
+        <p>인터뷰를 통해 많은 걸 배웠습니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 팀원 2 -->
+  <div class="member-card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="images/소개2.png" alt="사진" class="member-photo" />
+        <h3 class="member-name">이도우</h3>
+        <p class="member-role">디자이너</p>
+        <p class="member-desc">2024학번</p>
+      </div>
+      <div class="card-back">
+        <h3>프로젝트 감상</h3>
+        <p>협업의 소중함을 느꼈습니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 팀원 3 -->
+  <div class="member-card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="images/소개3.png" alt="사진" class="member-photo" />
+        <h3 class="member-name">이보람</h3>
+        <p class="member-role">프론트엔드</p>
+        <p class="member-desc">2024학번</p>
+      </div>
+      <div class="card-back">
+        <h3>프로젝트 감상</h3>
+        <p>많은 성장을 했습니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
+    <section class="project-intro">
+      <h2>青海進プログラムについて</h2>
+    <p>
+      <strong>青海進（チョンヘジン）プログラム</strong>は、海外就職を目指す韓国の大学生を対象に、<br />
+      語学研修・職業訓練・インターンシップ・就職支援などを総合的に提供するグローバル人材育成プログラムです。<br /><br />
+      本プログラムは、韓国教育部と韓国産業人力公団の支援により運営されており、<br />
+      海外企業との連携を通じて、実際の就職につながる機会を提供しています。<br /><br />
+      「青海進（청해진）」は「<strong>청년（青年）＋해외（海外）＋진출（進出）</strong>」を意味し、<br />
+      若者のグローバルな挑戦を後押しするプログラムです。
+    </p>
+       <div class="carousel">
+    <div class="carousel-inner">
+      <img src="images/KakaoTalk_20250809_050211926.jpg" alt="청해진 이미지1" />
+      <img src="images/KakaoTalk_20250809_051345947_01.jpg" alt="청해진 이미지2" />
+      <img src="images/KakaoTalk_20250809_051345947_02.jpg" alt="청해진 이미지3" />
+    </div>
+
+    <!-- 화살표 버튼 -->
+    <button class="carousel-prev">&#10094;</button>
+    <button class="carousel-next">&#10095;</button>
+  </div>
+</section>
+   </section>
+  
+  </main>
+  </div>
+
+      <!-- <header>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="./index.html">TOP</a></li>
+            <li><a href="./interview.html">INTERVIEW</a></li>
+            <li><a href="./team.html">TEAM</a></li>
+          </ul>
+        </nav>
+      </header> -->
+   </div> <!--/#info-->
+    <footer class="program-footer">
+      <div class="footer-container">
+        <p class="footer-copy">
+          ⓒ 2025 청해진 대학 사업 프로그램. All rights reserved.
+        </p>
+        <p class="footer-warning">
+          본 페이지는 <strong>청해진 대학 사업 프로그램</strong>의 일환으로
+          제작되었습니다.<br />
+          페이지 내 모든 콘텐츠는 승인된 관계자에 한해 열람 가능하며,<br />
+          <strong class="text-danger">무단 복제·배포·공유를 금합니다.</strong>
+        </p>
+        <p class="footer-contact">문의: lbm8546@gmail.com</p>
+      </div>
+    </footer>
+<script>
+  const inner = document.querySelector('.carousel-inner');
+  const slides = document.querySelectorAll('.carousel-inner img');
+  const prevBtn = document.querySelector('.carousel-prev');
+  const nextBtn = document.querySelector('.carousel-next');
+
+  let index = 1; // 복제 슬라이드 때문에 1부터 시작
+  const slideCount = slides.length;
+
+  // 앞뒤로 복제 슬라이드 추가
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[slideCount - 1].cloneNode(true);
+
+  inner.insertBefore(lastClone, slides[0]); // 맨 앞에 마지막 복제
+  inner.appendChild(firstClone);            // 맨 뒤에 첫 번째 복제
+
+  const newSlides = document.querySelectorAll('.carousel-inner img');
+  const totalSlides = newSlides.length;
+
+  // 초기 위치 설정
+  inner.style.transform = `translateX(-${index * 100}%)`;
+
+  function moveToSlide(i) {
+    inner.style.transition = 'transform 0.5s ease-in-out';
+    inner.style.transform = `translateX(-${i * 100}%)`;
+    index = i;
+  }
+
+  // 전환 후 복제 위치 조정
+  inner.addEventListener('transitionend', () => {
+    if (newSlides[index] === firstClone) {
+      inner.style.transition = 'none';
+      index = 1;
+      inner.style.transform = `translateX(-${index * 100}%)`;
+    }
+    if (newSlides[index] === lastClone) {
+      inner.style.transition = 'none';
+      index = slideCount;
+      inner.style.transform = `translateX(-${index * 100}%)`;
+    }
+  });
+
+  // 버튼 이벤트
+  prevBtn.addEventListener('click', () => {
+    if (index <= 0) return;
+    moveToSlide(index - 1);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (index >= totalSlides - 1) return;
+    moveToSlide(index + 1);
+  });
+
+  // 자동 슬라이드
+  setInterval(() => {
+    if (index >= totalSlides - 1) return;
+    moveToSlide(index + 1);
+  }, 5000);
+</script>
+
+  </body>
+</html>

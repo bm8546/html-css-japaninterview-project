@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+
+
+
+
+/*info-----------------------------------------
+------------*/
+/* About Us 상단 헤더 */
+.title-wrapper {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 300px 20px 300px;
+}
+
+.title-wrapper .page-title {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.title-wrapper .page-subtitle {
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
+
+/* 팀 소개 섹션 */
+.team-intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.intro-text .team-name {
+  font-size: 3.1rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.intro-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #002;
+}
+
+.intro-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 팀원 섹션 */
+.team-members {
+  background-color: #f8f9fb;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.members-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2a2a2a;
+}
+
+.member-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.member-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px 20px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-20px);
+}
+
+.member-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  /* border-radius: 40%; */
+  margin-bottom: 16px;
+}
+
+.member-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.member-role {
+  font-size: 1rem;
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.member-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* 청해진 사업소개 */
+.project-intro {
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.project-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2a2a2a;
+}
+
+.project-intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Carousel 슬라이더 */
+.carousel {
+  position: relative;
+  max-width: 1000px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-inner img {
+  width: 100%;          /* 각 슬라이드가 캐러셀 영역 전체 폭 차지 */
+  height: auto;         /* 원본 비율 유지 */
+  flex-shrink: 0;       /* 크기 줄어들지 않게 */
+  background-color: #000; /* 여백 배경 (선택) */
+}
+ 
+
+
+/* 버튼 */
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+
+
+/* 만약 카드뒤집기 하면*/
+.member-card {
+  perspective: 1000px;
+  width: 280px;
+  height: 380px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.member-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front img.member-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #f0f0f0;
+  color: #333;
+  text-align: center;
+}
+

@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <title>現在、ドウですか？</title>
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <!-- font awesome(icon) -->
     <script
       src="https://kit.fontawesome.com/f3d3ae9b3b.js"
       crossorigin="anonymous"
     ></script>
+    <!-- 자바스크립트 -->
+    <script src="./js/interview.js"></script>
   </head>
   <body>
     <header class="page-header">
@@ -30,6 +32,36 @@
       </nav>
     </header>
 
+    <div class="home-content wrapper">
+      <img src="./images/background.png" alt="배경" />
+      <h2>
+        <a href="index.html"
+          ><img class="osusume" src="./images/osusume.png" alt="오스스메"
+        /></a>
+      </h2>
+
+      <!--3D캐러셀-->
+      <div class="kaizen">
+        <button class="left"><img src="./images/left.png" alt="이전" /></button>
+        <div class="kaizen-track">
+          <img src="./images/jojo1.jpeg" alt="1권" />
+          <img src="./images/jojo3.jpeg" alt="2권" />
+          <img src="./images/jojo9.jpg" alt="3권" />
+          <img src="./images/jojo12.jpg" alt="12권" />
+          <img src="./images/jojo16.jpg" alt="16권" />
+          <img src="./images/jojo17.jpg" alt="17권" />
+        </div>
+        <button class="right">
+          <img src="./images/right.png" alt="다음" />
+        </button>
+      </div>
+
+      <div class="start-container">
+        <a class="button" href="profile.html"
+          ><img class="start" src="./images/start.png" alt="스타트"
+        /></a>
+      </div>
+    </div>
     <footer class="program-footer">
       <div class="footer-container">
         <p class="footer-copy">
@@ -44,5 +76,61 @@
         <p class="footer-contact">문의: lbm8546@gmail.com</p>
       </div>
     </footer>
+    <script>
+      (() => {
+        const track = document.querySelector(".kaizen-track");
+        const cards = Array.from(track.querySelectorAll("img"));
+        const btnPrev = document.querySelector(".left");
+        const btnNext = document.querySelector(".right");
+        const total = cards.length;
+
+        if (!track || cards.length === 0 || !btnPrev || !btnNext) {
+          console.warn("요소를 찾을 수 없습니다.");
+          return;
+        }
+
+        let index = 0;
+
+        function placeCards() {
+          cards.forEach((img, i) => {
+            const offset = (i - index + total) % total;
+
+            if (offset === 0) {
+              // 중앙 카드
+              img.style.transform = `translate(-50%, -50%) translateX(0) scale(1)`;
+              img.style.opacity = 1;
+              img.style.zIndex = 3;
+            } else if (offset === 1 || offset === -(total - 1)) {
+              // 오른쪽 카드
+              img.style.transform = `translate(-50%, -50%) translateX(250px) scale(0.9) rotateY(45deg)`;
+              img.style.opacity = 0.8;
+              img.style.zIndex = 2;
+            } else if (offset === total - 1 || offset === -1) {
+              // 왼쪽 카드
+              img.style.transform = `translate(-50%, -50%) translateX(-250px) scale(0.9) rotateY(-45deg)`;
+              img.style.opacity = 0.8;
+              img.style.zIndex = 2;
+            } else {
+              // 숨김(중앙 기준 유지한 채 투명)
+              img.style.transform = `translate(-50%, -50%) scale(0.8)`;
+              img.style.opacity = 0;
+              img.style.zIndex = 1;
+            }
+          });
+        }
+
+        placeCards();
+
+        btnNext.addEventListener("click", () => {
+          index = (index + 1) % total;
+          placeCards();
+        });
+
+        btnPrev.addEventListener("click", () => {
+          index = (index - 1 + total) % total;
+          placeCards();
+        });
+      })();
+    </script>
   </body>
 </html>
