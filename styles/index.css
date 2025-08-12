@@ -1,5 +1,8 @@
 @charset "UTF-8";
-
+body {
+  /* 이 수치를 지정하지않으면 body 콘텐츠와 겹칠 수 있다. */
+  padding-top: 120px;
+}
 /*home*/
 .osusume {
   display: block;
@@ -14,42 +17,41 @@
   display: flex;
   justify-content: center; /*가로중앙*/
   padding-top: 115px; /* 세로는 얘로 높이 조절 */
- border-bottom: 3px solid black; /* 버튼 밑 선 */
-  padding-bottom: 10px;     /* 버튼과 선 사이 여백 */
-  margin-bottom: 40px;      /* 선과 아래 콘텐츠 사이 여백 */   
+  border-bottom: 3px solid black; /* 버튼 밑 선 */
+  padding-bottom: 10px; /* 버튼과 선 사이 여백 */
+  margin-bottom: 40px; /* 선과 아래 콘텐츠 사이 여백 */
 }
 
 .start-container img:hover {
-  filter: brightness(0.7);   /*1이 원본이고 값>1 더 밝게, 값<1 더 어둡게/ opacity는 투명도 조절*/
-
+  filter: brightness(
+    0.7
+  ); /*1이 원본이고 값>1 더 밝게, 값<1 더 어둡게/ opacity는 투명도 조절*/
 }
 
-
 /*스타트버튼 끝*/
-
 
 .home-content.wrapper {
   position: relative;
 }
 
 .home-content.wrapper img[alt="배경"] {
-  position:absolute;
-  left: 50%;   /*화면 왼쪽부터 시작*/
-  top: 7%;  /*부모 기준 중아에서 시작*/
-  transform: translateX(-50%);  /* 이미지의 중앙을 오스스메 중앙에 맞춤*/
+  position: absolute;
+  left: 50%; /*화면 왼쪽부터 시작*/
+  top: 7%; /*부모 기준 중아에서 시작*/
+  transform: translateX(-50%); /* 이미지의 중앙을 오스스메 중앙에 맞춤*/
 
   width: 100%; /*브라우저 전체 너비  vw화면크기기준, %부모크기기준*/
   height: 82%;
   object-fit: cover;
   z-index: -1; /*내용 뒤로 보내기*/
-
 }
 
-.kaizen {               /* 컨테이너 자체도 가로 중앙 정렬 */
+.kaizen {
+  /* 컨테이너 자체도 가로 중앙 정렬 */
   position: relative;
   width: min(90vw, 720px);
   height: 300px;
-  margin: 0 auto;       /* 이게 가로 중앙 */
+  margin: 0 auto; /* 이게 가로 중앙 */
   perspective: 5000px;
   display: flex;
   align-items: center;
@@ -72,7 +74,7 @@
   height: 300px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
@@ -81,11 +83,9 @@
   transform: translate(-50%, -50%) scale(0.9); /* 기준 유지 + 축소 */
 }
 
-
-
-
 /*카드 넘기는 버튼 */
-.left, .right {
+.left,
+.right {
   position: absolute;
   top: 70%;
   transform: translateY(-50%);
@@ -95,10 +95,15 @@
   z-index: 10;
 }
 
-.left  { left: -200px; }
-.right { right: -200px; }
+.left {
+  left: -200px;
+}
+.right {
+  right: -200px;
+}
 
-.left img, .right img {
+.left img,
+.right img {
   width: 100px;
   height: auto;
 }
