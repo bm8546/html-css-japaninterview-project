@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     list.classList.toggle("show");
 
     if (list.classList.contains("show")) {
-      toggleBtn.textContent = "목차 닫기 ▲";
+      toggleBtn.textContent = "目次を閉じる ▲";
     } else {
-      toggleBtn.textContent = "목차 보기 ▼";
+      toggleBtn.textContent = "目次を開く ▼";
     }
   });
 
