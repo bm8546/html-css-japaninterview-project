@@ -28,18 +28,12 @@
 
 - 김현재
   - cootion1@gmail.com
+  - info.html 제작
 - 이도우
   - dlehdn1178@gmail.com
+  - index.html 제작
+  - 웹페이지의 전체적인 디자인 검수
 - 이보람
   - lbm8546@gmail.com
-
-## 🌐 프로젝트 구조 및 실행
-
-본 프로젝트는 웹페이지 형태로 결과물을 제작하며, GitHub Pages를 통해 배포됩니다.  
-로컬 환경에서 실행하려면 `index.html`을 브라우저로 열면 됩니다.
-
-```bash
-git clone https://github.com/bm8546/html-css-japaninterview-project.git
-cd html-css-japaninterview-project
-# index.html 파일을 더블 클릭 또는 브라우저에서 열기
-```
+  - interview.html 제작
+  - 깃허브 관리
