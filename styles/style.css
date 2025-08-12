@@ -13,11 +13,6 @@ html {
 img {
   max-width: 100%;
 }
-body,
-ul {
-  margin: 0;
-  padding: 0;
-}
 /* HEADER
 ----------------------- */
 .logo {
@@ -65,10 +60,21 @@ nav {
 }
 
 .page-header {
-  display: flex; /*네비 수평정렬*/
-  justify-content: space-between; /*양쪽끝에 붙이기*/
+  position: fixed; /* 스크롤해도 고정 */
+  top: 0; /* 화면 위쪽에 붙이기 */
+  left: 0;
+  width: 100%; /* 가로 전체 차지 */
+  background-color: white; /* 배경색 (내용이 겹치지 않게) */
+  display: flex; /* 네비 수평정렬 */
+  justify-content: space-between; /* 양쪽 끝에 배치 */
+  z-index: 1000; /* 다른 요소 위에 표시 */
+  padding: 0 20px; /* 좌우 여백 (선택사항) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 살짝 그림자 (선택사항) */
 }
-
+body {
+  /* 이 수치를 지정하지않으면 body 콘텐츠와 겹칠 수 있다. */
+  padding-top: 120px;
+}
 /* FOOTER
 ----------------------- */
 .program-footer {

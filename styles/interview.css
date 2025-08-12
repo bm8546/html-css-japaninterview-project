@@ -77,6 +77,34 @@
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
+#tocListContainer {
+  max-height: 300px; /* 목록 최대 높이 */
+  overflow-y: auto; /* 목록이 길면 스크롤 */
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px; /* 버튼과 비슷한 너비 */
+  font-size: 14px;
+}
+
+#tocListContainer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#tocListContainer ul li {
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#tocListContainer ul li:hover {
+  background-color: #007bff;
+  color: white;
+}
+
 /* 목차 모달 스타일 */
 .modal {
   display: none;
