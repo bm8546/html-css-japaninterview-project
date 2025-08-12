@@ -67,10 +67,6 @@ nav {
   padding: 0 20px; /* 좌우 여백 (선택사항) */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 살짝 그림자 (선택사항) */
 }
-body {
-  /* 이 수치를 지정하지않으면 body 콘텐츠와 겹칠 수 있다. */
-  padding-top: 120px;
-}
 /* FOOTER
 ----------------------- */
 .program-footer {
