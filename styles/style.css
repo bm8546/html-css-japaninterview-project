@@ -47,16 +47,12 @@ nav {
   color: #bd20ed;
 }
 
-.introduction:hover {
+.AboutUs:hover {
   color: #5034db;
 }
 
 .interview:hover {
   color: #f10bcb;
-}
-
-.appreciation:hover {
-  color: #f39c12;
 }
 
 .page-header {
