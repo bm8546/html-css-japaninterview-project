@@ -1,4 +1,9 @@
 @charset "utf-8";
+
+
+
+
+
 /*info-----------------------------------------
 ------------*/
 /* About Us 상단 헤더 */
@@ -43,7 +48,7 @@
 }
 
 .intro-text p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   color: #002;
 }
@@ -58,7 +63,7 @@
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* 팀원 섹션 */
@@ -84,7 +89,7 @@
 .member-card {
   background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 30px 20px;
   width: 280px;
   text-align: center;
@@ -110,90 +115,27 @@
   color: #333;
 }
 
+.member-name1 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
 .member-role {
   font-size: 1rem;
-  color: #0077cc;
+  color: #021307;
   margin-bottom: 10px;
 }
 
 .member-desc {
   font-size: 0.95rem;
-  color: #555;
+  color: #180202;
   line-height: 1.5;
 }
 
-/* 청해진 사업소개 */
-.project-intro {
-  max-width: 800px;
-  margin: 80px auto;
-  text-align: left;
-  padding: 0 20px;
-}
 
-.project-intro h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #2a2a2a;
-}
 
-.project-intro p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #444;
-}
 
-/* Carousel 슬라이더 */
-.carousel {
-  position: relative;
-  max-width: 1000px;
-  margin: 40px auto;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-inner {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-}
-
-.carousel-inner img {
-  width: 100%; /* 각 슬라이드가 캐러셀 영역 전체 폭 차지 */
-  height: auto; /* 원본 비율 유지 */
-  flex-shrink: 0; /* 크기 줄어들지 않게 */
-  background-color: #000; /* 여백 배경 (선택) */
-}
-
-/* 버튼 */
-.carousel-prev,
-.carousel-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1;
-  border-radius: 50%;
-  transition: background-color 0.3s;
-}
-
-.carousel-prev:hover,
-.carousel-next:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.carousel-prev {
-  left: 10px;
-}
-
-.carousel-next {
-  right: 10px;
-}
 
 /* 만약 카드뒤집기 하면*/
 .member-card {
@@ -223,7 +165,7 @@
   backface-visibility: hidden;
   background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -244,4 +186,98 @@
   background-color: #f0f0f0;
   color: #333;
   text-align: center;
+}
+
+
+
+/* 청해진 사업소개 */
+.project-intro {
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.project-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2a2a2a;
+}
+
+.project-intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.mySwiper {
+  width: 100%;
+  max-width: 800px;
+  height: 450px; /* 청해진 이미지 3,4의 높이에 맞춰 고정 */
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.mySwiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* 화면 채우기, 잘리는 부분 있음 */
+  object-position: center top; /* 잘릴 때 윗부분 기준으로 */
+  border-radius: 10px;
+}
+
+
+
+
+/* 반응형 설정 모바일*/ 
+
+  @media (max-width: 767px) {
+  /* 팀원 카드 1개씩 */
+  .team-members .member-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* 제목·본문 폰트 축소 */
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  .intro-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro-text p {
+    font-size: 0.9rem;
+  }
+
+  /* 이미지 전체 폭 */
+  .intro-image img,
+  .project-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 프로젝트 소개 여백 축소 */
+  .project-intro {
+    padding: 10px;
+  }
+
+  /* 푸터 폰트 크기 줄이기 */
+  .footer-copy,
+  .footer-warning,
+  .footer-contact {
+    font-size: 0.8rem;
+  }
+    
+  
+  
+  .mySwiper {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 }
