@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <title>現在、ドウですか？</title>
@@ -13,7 +13,9 @@
       src="https://kit.fontawesome.com/f3d3ae9b3b.js"
       crossorigin="anonymous"
     ></script>
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   </head>
   <body>
@@ -36,7 +38,7 @@
    <div id="info" class="AboutUs">
     <section class="title-wrapper">
       <h1 class="page-title">About Us</h1>
-      <p class="page-subtitle">저희 팀을 소개합니다.</p>
+      <p class="page-subtitle">チームを紹介します。</p>
     </section>
 
   <main>
@@ -121,18 +123,19 @@
       「青海進（청해진）」は「<strong>청년（青年）＋해외（海外）＋진출（進出）</strong>」を意味し、<br />
       若者のグローバルな挑戦を後押しするプログラムです。
     </p>
-       <div class="carousel">
-    <div class="carousel-inner">
-      <img src="images/KakaoTalk_20250809_050211926.jpg" alt="청해진 이미지1" />
-      <img src="images/KakaoTalk_20250809_051345947_01.jpg" alt="청해진 이미지2" />
-      <img src="images/KakaoTalk_20250809_051345947_02.jpg" alt="청해진 이미지3" />
-      <img src="images/KakaoTalk_20250812_152927345_01.jpg" alt="청해진 이미지4"/>
-      <img src="images/KakaoTalk_20250812_152927345.jpg" alt="청해진 이미지5"/>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/KakaoTalk_20250809_050211926.jpg" alt="청해진 이미지1" /></div>
+      <div class="swiper-slide"><img src="images/KakaoTalk_20250809_051345947_01.jpg" alt="청해진 이미지2" /></div>
+      <div class="swiper-slide"><img src="images/KakaoTalk_20250809_051345947_02.jpg" alt="청해진 이미지3" /></div>
+      <div class="swiper-slide"><img src="images/KakaoTalk_20250812_152927345_01.jpg" alt="청해진 이미지4" /></div>
+      <div class="swiper-slide"><img src="images/KakaoTalk_20250812_152927345.jpg" alt="청해진 이미지5" /></div>
     </div>
-
-    <!-- 화살표 버튼 -->
-    <button class="carousel-prev">&#10094;</button>
-    <button class="carousel-next">&#10095;</button>
+    <!-- 화살표 -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- 페이지네이션 -->
+    <div class="swiper-pagination"></div>
   </div>
 </section>
    </section>
@@ -154,64 +157,24 @@
         <p class="footer-contact">문의: lbm8546@gmail.com</p>
       </div>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  const inner = document.querySelector('.carousel-inner');
-  const slides = document.querySelectorAll('.carousel-inner img');
-  const prevBtn = document.querySelector('.carousel-prev');
-  const nextBtn = document.querySelector('.carousel-next');
-
-  let index = 1; // 복제 슬라이드 때문에 1부터 시작
-  const slideCount = slides.length;
-
-  // 앞뒤로 복제 슬라이드 추가
-  const firstClone = slides[0].cloneNode(true);
-  const lastClone = slides[slideCount - 1].cloneNode(true);
-
-  inner.insertBefore(lastClone, slides[0]); // 맨 앞에 마지막 복제
-  inner.appendChild(firstClone);            // 맨 뒤에 첫 번째 복제
-
-  const newSlides = document.querySelectorAll('.carousel-inner img');
-  const totalSlides = newSlides.length;
-
-  // 초기 위치 설정
-  inner.style.transform = `translateX(-${index * 100}%)`;
-
-  function moveToSlide(i) {
-    inner.style.transition = 'transform 0.5s ease-in-out';
-    inner.style.transform = `translateX(-${i * 100}%)`;
-    index = i;
-  }
-
-  // 전환 후 복제 위치 조정
-  inner.addEventListener('transitionend', () => {
-    if (newSlides[index] === firstClone) {
-      inner.style.transition = 'none';
-      index = 1;
-      inner.style.transform = `translateX(-${index * 100}%)`;
-    }
-    if (newSlides[index] === lastClone) {
-      inner.style.transition = 'none';
-      index = slideCount;
-      inner.style.transform = `translateX(-${index * 100}%)`;
-    }
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    grabCursor: true,
   });
-
-  // 버튼 이벤트
-  prevBtn.addEventListener('click', () => {
-    if (index <= 0) return;
-    moveToSlide(index - 1);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    if (index >= totalSlides - 1) return;
-    moveToSlide(index + 1);
-  });
-
-  // 자동 슬라이드
-  setInterval(() => {
-    if (index >= totalSlides - 1) return;
-    moveToSlide(index + 1);
-  }, 5000);
 </script>
 
   </body>
