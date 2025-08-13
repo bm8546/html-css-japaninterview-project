@@ -1,9 +1,4 @@
 @charset "utf-8";
-
-
-
-
-
 /*info-----------------------------------------
 ------------*/
 /* About Us 상단 헤더 */
@@ -63,7 +58,7 @@
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 팀원 섹션 */
@@ -89,7 +84,7 @@
 .member-card {
   background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px 20px;
   width: 280px;
   text-align: center;
@@ -154,7 +149,7 @@
   margin: 40px auto;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-inner {
@@ -164,13 +159,11 @@
 }
 
 .carousel-inner img {
-  width: 100%;          /* 각 슬라이드가 캐러셀 영역 전체 폭 차지 */
-  height: auto;         /* 원본 비율 유지 */
-  flex-shrink: 0;       /* 크기 줄어들지 않게 */
+  width: 100%; /* 각 슬라이드가 캐러셀 영역 전체 폭 차지 */
+  height: auto; /* 원본 비율 유지 */
+  flex-shrink: 0; /* 크기 줄어들지 않게 */
   background-color: #000; /* 여백 배경 (선택) */
 }
- 
-
 
 /* 버튼 */
 .carousel-prev,
@@ -178,7 +171,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   border: none;
   padding: 10px 16px;
@@ -191,7 +184,7 @@
 
 .carousel-prev:hover,
 .carousel-next:hover {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .carousel-prev {
@@ -201,8 +194,6 @@
 .carousel-next {
   right: 10px;
 }
-
-
 
 /* 만약 카드뒤집기 하면*/
 .member-card {
@@ -232,7 +223,7 @@
   backface-visibility: hidden;
   background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -254,4 +245,3 @@
   color: #333;
   text-align: center;
 }
-
