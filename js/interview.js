@@ -67,24 +67,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const ul = document.createElement("ul");
 
     figures.forEach((fig, index) => {
-      // 각 figure 내에 제목 또는 간단한 텍스트를 추출 (예: figcaption 또는 첫 번째 텍스트)
-      let title = "";
-      const caption = fig.querySelector("figcaption");
-      if (caption && caption.textContent.trim() !== "") {
-        title = caption.textContent.trim();
-      } else {
-        // fig 내 텍스트를 조금 잘라서 제목으로 사용 (없으면 'Figure {index+1}')
-        title =
-          fig.textContent.trim().substring(0, 30) || `Figure ${index + 1}`;
+      // data-title 속성이 있으면 우선 사용
+      let title = fig.dataset.title || "";
+
+      // 없으면 figcaption → 그 다음 figure 텍스트 순으로 대체
+      if (!title) {
+        const caption = fig.querySelector("figcaption");
+        if (caption && caption.textContent.trim() !== "") {
+          title = caption.textContent.trim();
+        } else {
+          title =
+            fig.textContent.trim().substring(0, 30) || `Figure ${index + 1}`;
+        }
       }
 
       const li = document.createElement("li");
       li.textContent = title;
       li.style.userSelect = "none";
 
-      // 클릭 시 해당 figure로 스크롤
       li.addEventListener("click", () => {
-        fig.scrollIntoView({ behavior: "smooth" });
+        const header = document.querySelector("header");
+        const headerHeight = header ? header.offsetHeight : 0;
+
+        const targetPosition =
+          fig.getBoundingClientRect().top + window.scrollY - headerHeight - 10; // 10px 여유
+        window.scrollTo({ top: targetPosition, behavior: "smooth" });
+
         // 목록 숨기기 및 아이콘 원복
         tocListContainer.style.display = "none";
         const icon = tocBtn.querySelector("i");
