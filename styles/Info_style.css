@@ -1,9 +1,4 @@
 @charset "utf-8";
-
-
-
-
-
 /*info-----------------------------------------
 ------------*/
 /* About Us 상단 헤더 */
@@ -63,7 +58,7 @@
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 팀원 섹션 */
@@ -89,7 +84,7 @@
 .member-card {
   background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px 20px;
   width: 280px;
   text-align: center;
@@ -133,10 +128,6 @@
   line-height: 1.5;
 }
 
-
-
-
-
 /* 만약 카드뒤집기 하면*/
 .member-card {
   perspective: 1000px;
@@ -165,7 +156,7 @@
   backface-visibility: hidden;
   background-color: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -187,8 +178,6 @@
   color: #333;
   text-align: center;
 }
-
-
 
 /* 청해진 사업소개 */
 .project-intro {
@@ -221,17 +210,14 @@
 .mySwiper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* 화면 채우기, 잘리는 부분 있음 */
+  object-fit: cover; /* 화면 채우기, 잘리는 부분 있음 */
   object-position: center top; /* 잘릴 때 윗부분 기준으로 */
   border-radius: 10px;
 }
 
+/* 반응형 설정 모바일*/
 
-
-
-/* 반응형 설정 모바일*/ 
-
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
   /* 팀원 카드 1개씩 */
   .team-members .member-grid {
     grid-template-columns: 1fr;
@@ -273,9 +259,7 @@
   .footer-contact {
     font-size: 0.8rem;
   }
-    
-  
-  
+
   .mySwiper {
     max-width: 100%;
     padding: 0 10px;
