@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /*info-----------------------------------------
 ------------*/
 /* About Us 상단 헤더 */
@@ -76,9 +77,10 @@
 
 .member-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
+  /* 줄바꿈 허용 */
+  justify-content: center; /* 가로 가운데 정렬 */
+  align-items: flex-start; /* 세로 시작점 맞춤 */
+  gap: 40px; /* 카드 사이 간격 */
 }
 
 .member-card {
@@ -86,9 +88,37 @@
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px 20px;
-  width: 280px;
+  width: 300px;
   text-align: center;
   transition: transform 0.3s ease;
+  perspective: 1000px;
+  height: 420px;
+  cursor: pointer;
+  flex: 0 1 300px; /* 기본 폭 300px, 줄어들 수 있음 */
+  max-width: 100%;
+}
+
+.card-back-text {
+  overflow-y: auto; /* 세로 스크롤 */
+  max-height: 270px; /* 카드 높이에 맞춰서 제한 */
+  padding-right: 5px;/* 스크롤바 공간 */
+  padding-left: 3px;
+  padding-top: 4px; 
+  text-align: left; /* 읽기 편하게 왼쪽 정렬 */
+}
+.card-back-text::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* 어두운 반투명 */
+  border-radius: 10px; /* 둥글게 */
+}
+.card-back-text::-webkit-scrollbar {
+  width: 6px; /* 얇게 */
+}
+.card-back-text::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* hover 시 진하게 */
+}
+
+.card-back-text::-webkit-scrollbar-track {
+  background-color: transparent; /* 배경 투명 */
 }
 
 .member-card:hover {
@@ -129,12 +159,6 @@
 }
 
 /* 만약 카드뒤집기 하면*/
-.member-card {
-  perspective: 1000px;
-  width: 280px;
-  height: 380px;
-  cursor: pointer;
-}
 
 .card-inner {
   position: relative;
@@ -148,8 +172,7 @@
   transform: rotateY(180deg);
 }
 
-.card-front,
-.card-back {
+.card-front {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -158,6 +181,21 @@
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px, 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
