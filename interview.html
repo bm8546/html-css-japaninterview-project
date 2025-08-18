@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/interview.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- font awesome(icon) -->
     <script
       src="https://kit.fontawesome.com/f3d3ae9b3b.js"
@@ -14,6 +27,11 @@
     ></script>
     <!-- 자바스크립트 -->
     <script src="./js/interview.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="page-header">
@@ -32,7 +50,7 @@
       </nav>
     </header>
 
-    <main class="interview-main">
+    <main class="interview-main biz-udpgothic-regular">
       <!-- 인터뷰 목차 이동 -->
       <section class="interview-topics">
         <button class="topics-toggle">目次を開く▼</button>
@@ -79,32 +97,32 @@
         </ul>
       </section>
       <!-- 인터뷰 본문 -->
-      <article class="interview-contents">
-        <figure id="q1" data-title="大学のころ">
-          大学ではどんな人でしたか？
-        </figure>
-        <img src="./images/大学時代.JPEG" alt="대학시절사진" />
-        <p>
-          大学では、あんまり真面目じゃなかったです。
-          高校まで一生懸命に勉強したが、大学に入っては。。笑
-          愛媛県松山市に住みましたが、愛媛から静岡県にある大学に入りました。初めて親から離れて自由になれたので、そこで勉強しなきゃという思いがもうなくなって、友達と楽しく遊びました。（笑）バレーボールとか、魔雀など、そんな生活を送くりました。
-        </p>
 
-        <figure id="q2" data-title="初めての勤務">
-          初めて働いた企業はどのような企業でしたか？
-        </figure>
+      <article class="interview-contents">
+        <div class="contents-box">
+          <img src="./images/大学時代.JPEG" alt="대학시절사진" />
+          <div class="qa">
+            <figure id="q1">大学ではどんな人でしたか？</figure>
+            <p>
+              大学では、あんまり真面目じゃなかったです。
+              高校まで一生懸命に勉強したが、大学に入っては。。笑
+              愛媛県松山市に住みましたが、愛媛から静岡県にある大学に入りました。初めて親から離れて自由になれたので、そこで勉強しなきゃという思いがもうなくなって、友達と楽しく遊びました。（笑）バレーボールとか、魔雀など、そんな生活を送くりました。
+            </p>
+          </div>
+        </div>
+
+        <figure id="q2">初めて働いた企業はどのような企業でしたか？</figure>
         <p>
           自動マテリアルハンドリング（自動素材運搬及び処理システム）ですが、工場があって、テレビの素材を作るときに、その素材全部自動でいろんな工程を動くことです。そのガラスの上に基盤押せたり、自動で運送し処理することです。そのオートメーションのシステムを作る会社です。
         </p>
 
-        <figure id="q3" data-title="入社後の適応">
-          入社したあとに、会社に適応することで頑張ったこととか、難しかったとことかありますが？
-        </figure>
+        <figure id="q3">入社後の適応は？</figure>
         <p>
           そうですね。やっぱり努力したことの1つは、たまたま会社が海外に進出していて、「ちょっと海外に行って、そのお客様と打ち合わせしてこい」そいうことをよく言われたんですね。
           で、私は学生の時、英語が得意だったので、その英語を活かしました。でもやっぱり、日本人の英語学習って、今も変わってないと思うんですけど、読んだり書いたりはできるんですけど、話すのがなかなか難しいんですね。
           なので、日本に帰ってきてからまたスピーキングの勉強をして、一生懸命頑張ってましたね。
         </p>
+
         <figure id="q4" data-title="転職の理由">
           前の会社で転職した理由がありますか。
         </figure>
@@ -117,12 +135,14 @@
         <figure id="q5" data-title="韓国に行こう">
           韓国に行く理由とかありますか。
         </figure>
+        <img src="./images/韓国での仕事①.JPEG" alt="두사람이 서있는 사진" />
         <p>
           韓国に来た理由は、1つが、この私の前にいた方が、もう5年以上経験したんで、変わる交代の時期だったんです。その方が次は誰がいいんだって言われた時に私の名前を挙げてくれて、上司もじゃあ加藤だったらいけるんじゃないかって言われました。行ってみないかって言われて、私としてもチャレンジだったんで、是非行きますっていうことで決まりました。
         </p>
         <figure id="q6" data-title="現在している仕事">
           今、加藤さんは会社でどんな仕事をされていますか？
         </figure>
+        <img src="./images/韓国での仕事③.JPEG" alt="회의중인 사진" />
         <p>
           私は現在、この会社の社長として、組織運営や人事、予算・投資に関する様々な意思決定を担当しています。
           人を新たに雇うとなかなかクビにならないから誰を雇うか、会社のお金をどこに使うかなどを考え、判断するのが主な仕事です。また、会社の売上や受注状況、今後のビジネスの見通しを数字で確認し、全体の方向性を決める役割も担っています。
