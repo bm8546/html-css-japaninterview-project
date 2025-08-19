@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+  <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/interview.css" />
+    <link rel="stylesheet" href="./styles/profile.css" />
+
+    <!-- font awesome(icon) -->
+    <script
+      src="https://kit.fontawesome.com/f3d3ae9b3b.js"
+      crossorigin="anonymous"
+    ></script>
+
+  <style>
+    body.profile-page {
+      background: #262626;
+      color: #f5f5f5;
+      min-height: 100vh; /* 100dvh 대신 호환성 좋은 값 */
+    }
+  </style>
+
+
+</head>
+<body class="profile-page">
+   <header class="page-header">
+      <a href="index.html">
+        <img class="logo" src="images/KakaoTalk_20250812_143959303.png" alt="로고 이미지" />
+      </a>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="profile.html" class="profile">Profile</a></li>
+          <li>
+            <a href="info.html" class="AboutUs">About Us</a>
+          </li>
+
+          <li><a href="interview.html" class="interview">interview</a></li>
+        </ul>
+      </nav>
+    </header>
+
+     <!-- 타이틀 이미지 -->
+  <div class="title-banner">
+    <img src="./images/profile.png" alt="Title Image" />
+  </div>
+
+  <div class="card-grid">
+    <!-- 카드 1~9 -->
+    <div class="card">
+      <div class="card-front"><img src="./images/card.png" alt="앞면"></div>
+      <div class="card-back"><img src="./images/card-back.png" alt="뒷면"></div>
+    </div>
+    <div class="card">
+      <div class="card-front"><img src="./images/card.png" alt="앞면"></div>
+      <div class="card-back"><img src="./images/card-back.png" alt="뒷면"></div>
+    </div>
+    <div class="card">
+      <div class="card-front"><img src="./images/card.png" alt="앞면"></div>
+      <div class="card-back"><img src="./images/card-back.png" alt="뒷면"></div>
+    </div>
+    <div class="card">
+      <div class="card-front"><img src="./images/card.png" alt="앞면"></div>
+      <div class="card-back"><img src="./images/card-back.png" alt="뒷면"></div>
+    </div>
+    <div class="card">
+      <div class="card-front"><img src="./images/card.png" alt="앞면"></div>
+      <div class="card-back"><img src="./images/card-back.png" alt="뒷면"></div>
+    </div>
+    <div class="card">
+      <div class="card-front"><img src="./images/card.png" alt="앞면"></div>
+      <div class="card-back"><img src="./images/card-back.png" alt="뒷면"></div>
+    </div>
+    <div class="card">
+      <div class="card-front"><img src="./images/card.png" alt="앞면"></div>
+      <div class="card-back"><img src="./images/card-back.png" alt="뒷면"></div>
+    </div>
+    <div class="card">
+      <div class="card-front"><img src="./images/card.png" alt="앞면"></div>
+      <div class="card-back"><img src="./images/card-back.png" alt="뒷면"></div>
+    </div>
+    <div class="card">
+      <div class="card-front"><img src="./images/card.png" alt="앞면"></div>
+      <div class="card-back"><img src="./images/card-back.png" alt="뒷면"></div>
+    </div>
+  </div>
+   
+  <script>
+  document.querySelector('.card-grid').addEventListener('click', (e) => {
+    if (e.target.closest('a, button')) return; // 링크/버튼은 통과
+    const card = e.target.closest('.card');
+    if (card) card.classList.toggle('flipped');
+  });
+</script>
+
+</body>
+</html>
