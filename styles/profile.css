@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+/* 전체 배경 및 텍스트 설정 */
+body.profile-page {
+  background: #262626;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.page-header {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  top: 0px;
+  z-index: 10;
+}
+
+/* 타이틀 이미지 */
+.title-banner img {
+  width: min(100%, 1500px); /* 반응형 + 최대 1500px */
+  height: 180px;
+  object-fit: cover;
+  display: inline-block;
+  margin: 0 auto; 
+}
+
+/* 이미지가 들어 있는 div 자체를 아래로 내리기 */
+.title-banner {
+  margin-top: 50px; /* 원하는 만큼 내리기 */
+  text-align: center; /* (옵션) 안의 이미지도 가운데로 */
+}
+
+body.profile-page {
+  padding-top: 100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 카드 3x3 레이아웃 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 240px);
+    justify-content: center;                 /* 그리드를 가운데로 */
+  column-gap: 100px;                        /* 가로 간격 */
+  row-gap: 32px;                           /* 세로 간격 */
+  padding: 20px 16px;
+}
+
+/* 각 카드 */
+.card {
+  width: 240px;               /* ✅ 고정 너비 */
+  height: 310px;              /* ✅ 고정 높이 (aspect-ratio 대신) */
+  position: relative; 
+  perspective: 1000px; /* 3D 효과 */ 
+  cursor: pointer;
+    transform-style: preserve-3d;
+
+}
+
+/* 앞/뒤 면 공통 */
+.card-front, 
+.card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  transition: transform 0.8s;
+    pointer-events: none; /* 내부 이미지가 클릭을 가로채지 않도록 */
+}
+
+/* 이미지 꽉 채우기 */
+.card-front img, 
+.card-back img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+    user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* 뒷면은 뒤집어 대기 */
+.card-back { transform: rotateY(180deg); }
+
+/* 뒤집힌 상태 */
+.card.flipped .card-front { transform: rotateY(180deg); }
+.card.flipped .card-back  { transform: rotateY(0deg);   }

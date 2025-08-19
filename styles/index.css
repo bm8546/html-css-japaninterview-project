@@ -4,13 +4,12 @@ body {
   padding-top: 120px;
 }
 /*home*/
-.osusume {
-  display: block;
-  width: 400px;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
+
+.page-title { margin: 0; line-height: 0; }           /* h2 기본 여백/줄간격 제거 */
+.jojo-logo   { display: block; width: min(45vw,570px); height: auto; margin: 0 auto; } /* 가운데+반응형 */
+
+
 
 /*스타트 버튼*/
 .start-container {
@@ -68,7 +67,7 @@ body {
 .kaizen-track img {
   position: absolute;
   left: 50%;
-  top: 70%;
+  top: 60%;
   /* JS가 transform을 덮어쓰므로 여기선 넣지 않음 */
   width: 230px;
   height: 300px;
@@ -87,7 +86,7 @@ body {
 .left,
 .right {
   position: absolute;
-  top: 70%;
+  top: 60%;
   transform: translateY(-50%);
   background: none;
   border: none;
