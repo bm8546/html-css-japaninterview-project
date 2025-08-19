@@ -82,11 +82,17 @@ body {
   color: #333;
   margin-bottom: 1rem;
 }
+.interview-contents h1 {
+  text-align: center;
+  margin: 4rem 0 2.5rem; /* 위아래 여백 */
+  font-size: 2.2rem;
+  line-height: 1.4;
+}
 .contents-box {
   display: flex; /* 이미지 + q1만 가로 배치 */
+  margin: 3rem 0;
+  gap: 24px;
   align-items: flex-end;
-  gap: 20px;
-  margin-bottom: 2rem; /* q1 묶음 끝나고 아래 여백 */
 }
 
 .contents-box img {
@@ -107,15 +113,20 @@ body {
   flex: 1; /* 남은 공간(40%) 차지 */
 }
 .paragraph-box {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: flex-start;
+  display: grid; /* Grid 레이아웃 적용 */
+  grid-template-columns: repeat(2, 1fr); /* 3열 */
+  grid-template-rows: repeat(3, auto); /* 2행 */
+  margin: 3.5rem 0;
+  gap: 28px; /* 박스 사이 간격 */
 }
+
 .p-qa {
-  flex: 1; /* 각각 같은 비율로 공간 차지 */
-  padding: 16px;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: left;
 }
+
 /* 고정버튼 스타일 */
 .floating-btn {
   position: fixed;
