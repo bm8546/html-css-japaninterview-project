@@ -95,14 +95,27 @@ body {
   height: auto;
   object-fit: cover; /* 비율 유지하며 채우기 */
 }
-
+.qa-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* 세로로 QA 쌓기 */
+}
 .qa {
   margin-bottom: 1.5rem; /* 묶음 간격 */
 }
 .contents-box .qa {
   flex: 1; /* 남은 공간(40%) 차지 */
 }
-
+.paragraph-box {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.p-qa {
+  flex: 1; /* 각각 같은 비율로 공간 차지 */
+  padding: 16px;
+}
 /* 고정버튼 스타일 */
 .floating-btn {
   position: fixed;
