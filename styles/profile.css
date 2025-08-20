@@ -58,8 +58,15 @@ body.profile-page {
   position: relative; 
   perspective: 1000px; /* 3D 효과 */ 
   cursor: pointer;
-    transform-style: preserve-3d;
+}
 
+/* ✅ 회전은 card-inner에만 적용 */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;     /* 자식 3D 유지 */
+  transition: transform 0.8s;
 }
 
 /* 앞/뒤 면 공통 */
@@ -68,24 +75,56 @@ body.profile-page {
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
-  transition: transform 0.8s;
-    pointer-events: none; /* 내부 이미지가 클릭을 가로채지 않도록 */
-}
+    -webkit-backface-visibility: hidden; /* 사파리 대응 */
+  }
 
 /* 이미지 꽉 채우기 */
 .card-front img, 
 .card-back img {
-  display: block;
+    position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
     user-select: none;
   -webkit-user-drag: none;
+    z-index: 0;                     /* 이미지 아래 */
+
+}
+
+/* 이미지 위 중앙에 텍스트 고정 */
+.card-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); /* 정확히 중앙 */
+  z-index: 1;                       /* 텍스트 위 */
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,.8);
+  backface-visibility: hidden;      /* ✅ 텍스트도 뒤집힐 때 안 비치게 */
+  -webkit-backface-visibility: hidden;
+    pointer-events: none;             /* 클릭 방해 X */
+
+}
+
+/* 앞면 글자만 노란색 */
+.card-front .card-text {
+  color: #FFC000;
+}
+
+/* 뒷면 글자만 검은색 */
+.card-back .card-text {
+  color: black;
+  text-shadow: none; /* 필요하면 그림자도 끔 */
 }
 
 /* 뒷면은 뒤집어 대기 */
 .card-back { transform: rotateY(180deg); }
 
-/* 뒤집힌 상태 */
-.card.flipped .card-front { transform: rotateY(180deg); }
-.card.flipped .card-back  { transform: rotateY(0deg);   }
+/* flipped일 때만 180도 회전 */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
