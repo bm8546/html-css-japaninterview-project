@@ -4,10 +4,14 @@
 ------------*/
 /* About Us 상단 헤더 */
 .title-wrapper {
-  background-color: #000;
+  background-color: #430a79;
+  background-image: url("../images/diamond1_1.png"); /* 방금 만든 패턴 */
+  background-repeat: repeat; /* 타일링 */
+  background-size: 400px 400px; /* 패턴 크기 조절 (원하는 크기로) */
+  background-blend-mode: multiply; /* 색상과 패턴을 섞어서 조화롭게 */
   color: #fff;
   text-align: center;
-  padding: 300px 20px 300px;
+  padding: 300px 20px;
 }
 
 .title-wrapper .page-title {
@@ -101,9 +105,9 @@
 .card-back-text {
   overflow-y: auto; /* 세로 스크롤 */
   max-height: 270px; /* 카드 높이에 맞춰서 제한 */
-  padding-right: 5px;/* 스크롤바 공간 */
+  padding-right: 5px; /* 스크롤바 공간 */
   padding-left: 3px;
-  padding-top: 4px; 
+  padding-top: 4px;
   text-align: left; /* 읽기 편하게 왼쪽 정렬 */
 }
 .card-back-text::-webkit-scrollbar-thumb {
@@ -123,14 +127,6 @@
 
 .member-card:hover {
   transform: translateY(-20px);
-}
-
-.member-photo {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  /* border-radius: 40%; */
-  margin-bottom: 16px;
 }
 
 .member-name {
@@ -203,8 +199,8 @@
 }
 
 .card-front img.member-photo {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 12px;
