@@ -19,18 +19,20 @@ body.profile-page {
 }
 
 /* 타이틀 이미지 */
-.title-banner img {
-  width: min(100%, 1500px); /* 반응형 + 최대 1500px */
-  height: 180px;
-  object-fit: cover;
-  display: inline-block;
-  margin: 0 auto; 
+/* 이미지가 들어 있는 div */
+.title-banner {
+  margin-top: 50px;
+  width: 100vw; /* 화면 전체 너비 */
+  overflow: hidden; /* 이미지 넘침 방지 */
+  text-align: center;
 }
 
-/* 이미지가 들어 있는 div 자체를 아래로 내리기 */
-.title-banner {
-  margin-top: 50px; /* 원하는 만큼 내리기 */
-  text-align: center; /* (옵션) 안의 이미지도 가운데로 */
+/* 타이틀 이미지 */
+.title-banner img {
+  width: 100vw; /* 화면 전체 너비 */
+  height: 180px;
+  object-fit: cover;
+  display: block; /* inline-block 대신 block으로 중앙 정렬 */
 }
 
 body.profile-page {
@@ -45,18 +47,18 @@ body.profile-page {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 240px);
-    justify-content: center;                 /* 그리드를 가운데로 */
-  column-gap: 100px;                        /* 가로 간격 */
-  row-gap: 32px;                           /* 세로 간격 */
+  justify-content: center; /* 그리드를 가운데로 */
+  column-gap: 100px; /* 가로 간격 */
+  row-gap: 32px; /* 세로 간격 */
   padding: 20px 16px;
 }
 
 /* 각 카드 */
 .card {
-  width: 240px;               /* ✅ 고정 너비 */
-  height: 310px;              /* ✅ 고정 높이 (aspect-ratio 대신) */
-  position: relative; 
-  perspective: 1000px; /* 3D 효과 */ 
+  width: 240px; /* ✅ 고정 너비 */
+  height: 310px; /* ✅ 고정 높이 (aspect-ratio 대신) */
+  position: relative;
+  perspective: 1000px; /* 3D 효과 */
   cursor: pointer;
 }
 
@@ -65,31 +67,30 @@ body.profile-page {
   position: relative;
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;     /* 자식 3D 유지 */
+  transform-style: preserve-3d; /* 자식 3D 유지 */
   transition: transform 0.8s;
 }
 
 /* 앞/뒤 면 공통 */
-.card-front, 
+.card-front,
 .card-back {
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
-    -webkit-backface-visibility: hidden; /* 사파리 대응 */
-  }
+  -webkit-backface-visibility: hidden; /* 사파리 대응 */
+}
 
 /* 이미지 꽉 채우기 */
-.card-front img, 
+.card-front img,
 .card-back img {
-    position: absolute;
+  position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-    user-select: none;
+  user-select: none;
   -webkit-user-drag: none;
-    z-index: 0;                     /* 이미지 아래 */
-
+  z-index: 0; /* 이미지 아래 */
 }
 
 /* 이미지 위 중앙에 텍스트 고정 */
@@ -97,21 +98,20 @@ body.profile-page {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%); /* 정확히 중앙 */
-  z-index: 1;                       /* 텍스트 위 */
+  transform: translate(-50%, -50%); /* 정확히 중앙 */
+  z-index: 1; /* 텍스트 위 */
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  text-shadow: 1px 1px 4px rgba(0,0,0,.8);
-  backface-visibility: hidden;      /* ✅ 텍스트도 뒤집힐 때 안 비치게 */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  backface-visibility: hidden; /* ✅ 텍스트도 뒤집힐 때 안 비치게 */
   -webkit-backface-visibility: hidden;
-    pointer-events: none;             /* 클릭 방해 X */
-
+  pointer-events: none; /* 클릭 방해 X */
 }
 
 /* 앞면 글자만 노란색 */
 .card-front .card-text {
-  color: #FFC000;
+  color: #ffc000;
 }
 
 /* 뒷면 글자만 검은색 */
@@ -121,10 +121,11 @@ body.profile-page {
 }
 
 /* 뒷면은 뒤집어 대기 */
-.card-back { transform: rotateY(180deg); }
+.card-back {
+  transform: rotateY(180deg);
+}
 
 /* flipped일 때만 180도 회전 */
 .card.flipped .card-inner {
   transform: rotateY(180deg);
 }
-
