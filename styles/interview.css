@@ -1,6 +1,7 @@
 body {
   /* 이 수치를 지정하지않으면 body 콘텐츠와 겹칠 수 있다. */
   padding-top: 120px;
+  background-color: #000000;
 }
 :target {
   scroll-margin-top: 105px; /* 헤더 높이 */
@@ -19,7 +20,7 @@ body {
   font-style: normal;
 }
 
-.noto-serif-jp-400 > {
+.noto-serif-jp-400 {
   font-family: "Noto Serif JP", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -33,15 +34,16 @@ body {
   padding: 0 20px;
 }
 .interview-topics {
-  background-color: rgb(235, 235, 235);
+  background-color: #000000;
   padding: 20px;
+  border-color: #fff;
   border-radius: 8px;
   margin-bottom: 40px;
 }
 .interview-topics button.topics-toggle {
   background: none;
   border: none;
-  color: black;
+  color: #fff;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
@@ -75,15 +77,15 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 2rem 0 1rem;
-  border-left: 4px solid #0066cc;
+  border-bottom: 2px solid #e2007f;
   padding-left: 0.75rem;
-  color: #007acc;
+  color: #fff;
   line-height: 1.6;
   letter-spacing: 0.03em;
 
   font-family: "Noto Serif JP", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 .interview-contents p {
@@ -94,23 +96,27 @@ body {
 }
 .interview-contents h1 {
   text-align: center;
-  margin: 4rem 0 2.5rem; /* 위아래 여백 */
+  /* margin: 4rem 0 2.5rem; 위아래 여백 */
+  padding: 100px 0;
   font-size: 2.2rem;
   line-height: 1.4;
+  color: #fff;
 
   font-family: "Noto Serif JP", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 .contents-box {
   display: flex; /* 이미지 + q1만 가로 배치 */
   margin: 3rem 0;
+  padding: 50px 0;
   gap: 24px;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .contents-box img {
+  padding: 0 50px;
   flex: 0 0 60%; /* 가로 공간의 60% 차지 */
   max-width: 50%; /* 이미지가 영역 넘지 않도록 */
   height: auto;
@@ -121,8 +127,14 @@ body {
   display: flex;
   flex-direction: column; /* 세로로 QA 쌓기 */
 }
+.qa-list p {
+  color: #fff;
+}
 .qa {
   margin-bottom: 1.5rem; /* 묶음 간격 */
+}
+.qa p {
+  color: #fff;
 }
 .contents-box .qa {
   flex: 1; /* 남은 공간(40%) 차지 */
@@ -132,6 +144,7 @@ body {
   grid-template-columns: repeat(2, 1fr); /* 3열 */
   grid-template-rows: repeat(3, auto); /* 2행 */
   margin: 3.5rem 0;
+  padding: 50px 0;
   gap: 28px; /* 박스 사이 간격 */
 }
 
@@ -141,7 +154,9 @@ body {
   border: 1px solid #ccc;
   text-align: left;
 }
-
+.p-qa p {
+  color: #fff;
+}
 /* 고정버튼 스타일 */
 .floating-btn {
   position: fixed;
@@ -158,7 +173,7 @@ body {
   height: 50px;
   border-radius: 50%;
   border: none;
-  background-color: #007bff;
+  background-color: #e2007f;
   color: white;
   font-size: 20px;
   cursor: pointer;
@@ -191,32 +206,11 @@ body {
 }
 
 #tocListContainer ul li:hover {
-  background-color: #007bff;
-  color: white;
+  background-color: #e2007f;
 }
-
-/* 목차 모달 스타일 */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1001;
-  left: 0;
-  top: 0;
+#tocListContainer ul li a {
+  color: black;
+  text-decoration: none;
+  display: block; /* a가 li 전체 영역 차지 */
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 15% auto;
-  padding: 20px;
-  width: 300px;
-  border-radius: 8px;
-}
-
-.close {
-  float: right;
-  font-size: 24px;
-  cursor: pointer;
 }
