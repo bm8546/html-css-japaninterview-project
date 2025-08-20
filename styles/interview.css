@@ -19,6 +19,12 @@ body {
   font-style: normal;
 }
 
+.noto-serif-jp-400 > {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 /* INTERVIEW
 ----------------------- */
 .interview-main {
@@ -72,9 +78,13 @@ body {
   border-left: 4px solid #0066cc;
   padding-left: 0.75rem;
   color: #007acc;
-  font-family: "BIZ UDPGothic", sans-serif;
   line-height: 1.6;
   letter-spacing: 0.03em;
+
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 .interview-contents p {
   line-height: 1.8;
@@ -87,6 +97,11 @@ body {
   margin: 4rem 0 2.5rem; /* 위아래 여백 */
   font-size: 2.2rem;
   line-height: 1.4;
+
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 .contents-box {
   display: flex; /* 이미지 + q1만 가로 배치 */
