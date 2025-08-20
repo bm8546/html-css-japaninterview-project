@@ -1,12 +1,33 @@
 @charset "utf-8";
 
+/* 구글폰트
+----------------------- */
+.biz-udpgothic-regular {
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.biz-udpgothic-bold {
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.noto-serif-jp-400 {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*info-----------------------------------------
 ------------*/
 /* About Us 상단 헤더 */
 body {
   background-color: #000; /* 전체 배경 검정색 */
-  color: #fff;           /* 기본 텍스트 흰색 (선택 사항) */
-  margin: 0;             /* 여백 제거 */
+  color: #fff; /* 기본 텍스트 흰색 (선택 사항) */
+  margin: 0; /* 여백 제거 */
   padding: 0;
 }
 .title-wrapper {
@@ -17,19 +38,24 @@ body {
   background-blend-mode: multiply; /* 색상과 패턴을 섞어서 조화롭게 */
   color: #fff;
   text-align: center;
-  padding: 100px 20px;
+  padding: 50px 20px;
   margin-top: 200px;
 }
 
 .title-wrapper .page-title {
   font-size: 4rem;
   font-weight: bold;
-  
+  text-align: center;
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .title-wrapper .page-subtitle {
   font-size: 2rem;
   margin-top: 25px;
+  text-align: center;
 }
 
 /* 팀 소개 섹션 */
@@ -96,6 +122,10 @@ body {
 }
 
 .member-card {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -257,6 +287,59 @@ body {
   border-radius: 10px;
 }
 
+.section-divider {
+  position: relative;
+  text-align: center;
+  margin: 1px 0; /* 위아래 여백 */
+}
+
+.section-divider::before {
+  content: "";
+  display: block;
+  height: 1px; /* 얇은 선 */
+  width: 80%;
+  background: #c2185b; /* 선 색상 (JOJO 포인트 색상) */
+  margin: 0 auto;
+}
+
+.section-divider::after {
+  content: "◆"; /* 중앙 문양 */
+  position: absolute;
+  top: -14px; /* 선 위 살짝 겹치게 */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px; /* 문양 크기 */
+  color: #c2185b; /* 문양 색상 */
+  /*background: #000; /* 배경색 (페이지 배경과 동일하게) */
+  padding: 0 8px; /* 문양 주위 배경 여백 */
+}
+
+.section-divider_1 {
+  position: relative;
+  text-align: center;
+  margin: 1px 0; /* 위아래 여백 */
+}
+
+.section-divider_1::before {
+  content: "";
+  display: block;
+  height: 1px; /* 얇은 선 */
+  width: 80%;
+  background: #1ce497; /* 선 색상 (JOJO 포인트 색상) */
+  margin: 0 auto;
+}
+
+.section-divider_1::after {
+  content: "♠"; /* 중앙 문양 */
+  position: absolute;
+  top: -14px; /* 선 위 살짝 겹치게 */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px; /* 문양 크기 */
+  color: #1ce497; /* 문양 색상 */
+  /*background: #000; /* 배경색 (페이지 배경과 동일하게) */
+  padding: 0 8px; /* 문양 주위 배경 여백 */
+}
 /* 반응형 설정 모바일*/
 
 @media (max-width: 767px) {
