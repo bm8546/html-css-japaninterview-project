@@ -6,6 +6,9 @@ body {
 :target {
   scroll-margin-top: 105px; /* 헤더 높이 */
 }
+span {
+  color: #e2007f;
+}
 /* 구글폰트
 ----------------------- */
 .biz-udpgothic-regular {
@@ -19,7 +22,8 @@ body {
   font-weight: 700;
   font-style: normal;
 }
-
+/* 고딕체 */
+/* 200~900 까지 조절 가능 */
 .noto-serif-jp-400 {
   font-family: "Noto Serif JP", serif;
   font-optical-sizing: auto;
@@ -33,45 +37,6 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-.interview-topics {
-  background-color: #000000;
-  padding: 20px;
-  border-color: #fff;
-  border-radius: 8px;
-  margin-bottom: 40px;
-}
-.interview-topics button.topics-toggle {
-  background: none;
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 0;
-  margin-bottom: 10px;
-}
-.interview-topics ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: none; /* 기본은 숨김 */
-}
-
-.interview-topics li {
-  margin-bottom: 10px;
-}
-
-.interview-topics a {
-  color: black;
-  text-decoration: none;
-}
-.interview-topics a:hover {
-  text-decoration: underline;
-}
-.interview-topics ul.show {
-  display: block; /* 버튼 클릭 시 보여주기 */
-}
-
 /* 인터뷰 콘텐츠 article */
 .interview-contents figure {
   font-size: 1.5rem;
