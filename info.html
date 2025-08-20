@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/Info_style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- font awesome(icon) -->
     <script
       src="https://kit.fontawesome.com/f3d3ae9b3b.js"
@@ -20,35 +28,35 @@
   </head>
 
   <body>
-    <header class="page-header">
+    <header class="page-header noto-serif-jp-400">
       <a href="index.html">
-        <img
-          class="logo"
-          src="images/KakaoTalk_20250812_143959303.png"
-          alt="로고 이미지"
-        />
+        <img class="logo" src="./images/logo.png" alt="로고 이미지" />
       </a>
       <nav>
         <ul class="main-nav">
           <li><a href="profile.html" class="profile">Profile</a></li>
-          <li><a href="info.html" class="AboutUs">About Us</a></li>
-          <li><a href="interview.html" class="interview">Interview</a></li>
+          <li><a href="interview.html" class="interview">interview</a></li>
+          <li>
+            <a href="info.html" class="AboutUs">creators</a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <div id="info" class="AboutUs">
       <section class="title-wrapper">
-        <h1 class="page-title">About Us</h1>
-        <p class="page-subtitle">チームを紹介します。</p>
+        <h1 class="page-title">Creators</h1>
+        <p class="page-subtitle noto-serif-jp-400">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;チームを紹介します。
+        </p>
       </section>
 
       <main>
         <!-- 팀 소개 -->
         <section class="team-intro">
           <div class="intro-text">
-            <h2 class="team-name">現在、ドウですか？</h2>
-            <p>
+            <h2 class="team-name noto-serif-jp-400">現在、ドウですか？</h2>
+            <p class="biz-udpgothic-regular">
               チーム名「<strong>現在、ドウですか？</strong>」には、2つの意味が込められています。<br />
               一つ目は、インタビューを行った<strong>加藤さんの現在の様子</strong>を尋ねる言葉。<br />
               二つ目は、<strong>海外就職や海外生活を目指す私たちの今</strong>を問いかける言葉です。<br /><br />
@@ -60,10 +68,10 @@
             <img src="images/001feebcaf9599f8.png" alt="팀 대표 이미지" />
           </div>
         </section>
-
+        <div class="section-divider"></div>
         <!-- 팀원 소개 -->
         <section class="team-members">
-          <h2 class="members-title">Our Members</h2>
+          <h2 class="members-title noto-serif-jp-400">Our Members</h2>
           <div class="member-grid">
             <!-- 팀원 1 -->
             <div class="member-card" onclick="this.classList.toggle('flipped')">
@@ -161,12 +169,13 @@
           <!-- .member-grid 끝 -->
         </section>
         <!-- .team-members 끝 -->
-
+        <div class="section-divider"></div>
         <!-- 청해진 프로그램 -->
         <section class="project-intro">
-          <h2>青海進プログラムについて</h2>
-          <p>
-            <strong>青海進（チョンヘジン）プログラム</strong
+          <h2 class="noto-serif-jp-400">青海進プログラムについて</h2>
+          <p noto-serif-jp-400>
+            <strong class="biz-udpgothic-bold"
+              >青海進（チョンヘジン）プログラム</strong
             >は、海外就職を目指す韓国の大学生を対象に、<br />
             語学研修・職業訓練・インターンシップ・就職支援などを総合的に提供するグローバル人材育成プログラムです。<br /><br />
             本プログラムは、韓国教育部と韓国産業人力公団の支援により運営されており、<br />
@@ -218,7 +227,7 @@
       </main>
     </div>
     <!-- #info 끝 -->
-
+    <div class="section-divider_1"></div>
     <footer class="program-footer">
       <div class="footer-container">
         <p class="footer-copy">
