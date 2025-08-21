@@ -32,22 +32,17 @@
     </style>
   </head>
   <body class="profile-page">
-    <header class="page-header">
+    <header class="page-header noto-serif-jp-400">
       <a href="index.html">
-        <img
-          class="logo"
-          src="images/KakaoTalk_20250812_143959303.png"
-          alt="로고 이미지"
-        />
+        <img class="logo" src="./images/logo.png" alt="로고 이미지" />
       </a>
       <nav>
         <ul class="main-nav">
           <li><a href="profile.html" class="profile">Profile</a></li>
-          <li>
-            <a href="info.html" class="AboutUs">About Us</a>
-          </li>
-
           <li><a href="interview.html" class="interview">interview</a></li>
+          <li>
+            <a href="info.html" class="AboutUs">creators</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -195,6 +190,19 @@
 
     <a href="interview.html" class="impact-text">YES!YES!YES!</a>
 
+    <footer class="program-footer">
+      <div class="footer-container">
+        <p class="footer-copy">
+          ⓒ 2025 청해진 대학 사업 프로그램. All rights reserved.
+        </p>
+        <p class="footer-warning">
+          본 페이지는 <strong>청해진 대학 사업 프로그램</strong>의 일환으로
+          제작되었습니다.<br />
+          페이지 내 모든 콘텐츠는 승인된 관계자에 한해 열람 가능하며,<br />
+          <strong class="text-danger">무단 복제·배포·공유를 금합니다.</strong>
+        </p>
+      </div>
+    </footer>
     <script>
       document.querySelector(".card-grid").addEventListener("click", (e) => {
         if (e.target.closest("a, button")) return; // 링크/버튼은 통과
