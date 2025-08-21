@@ -37,6 +37,41 @@ span {
   margin: 0 auto;
   padding: 0 20px;
 }
+.title-wrapper {
+  background-size: auto;
+  background-color: #2e3872;
+  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%232c2040' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: repeat; /* 타일링 */
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  margin: 25px 0 80px;
+}
+.banner-devide {
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center; /* 전체 가운데 정렬 */
+}
+.title-icon {
+  width: 40px;
+  height: auto;
+  position: relative;
+  top: 12px; /* 아래로 4px */
+}
+.page-title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.title-wrapper {
+  font-size: 1.5rem;
+  margin-top: 25px;
+  text-align: center;
+}
 /* 인터뷰 콘텐츠 article */
 .interview-contents figure {
   font-size: 1.5rem;
