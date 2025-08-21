@@ -18,21 +18,40 @@ body.profile-page {
   z-index: 10;
 }
 
-/* 타이틀 이미지 */
-/* 이미지가 들어 있는 div */
-.title-banner {
-  margin-top: 50px;
-  width: 100vw; /* 화면 전체 너비 */
-  overflow: hidden; /* 이미지 넘침 방지 */
-  text-align: center;
+.noto-serif-jp {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* 타이틀 이미지 */
-.title-banner img {
-  width: 100vw; /* 화면 전체 너비 */
-  height: 180px;
-  object-fit: cover;
-  display: block; /* inline-block 대신 block으로 중앙 정렬 */
+.title-wrapper {
+  background-color: #59a49e;
+  background-image: url("../images/diamond2.png"); /* 방금 만든 패턴 */
+  background-repeat: repeat; /* 타일링 */
+  background-size: 150px 150px; /* 패턴 크기 조절 (원하는 크기로) */
+  background-blend-mode: multiply; /* 색상과 패턴을 섞어서 조화롭게 */
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 50px;
+}
+
+.title-wrapper .page-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.title-wrapper .page-subtitle {
+  font-size: 1.5rem;
+  margin-top: 25px;
+  text-align: center;
 }
 
 body.profile-page {
@@ -100,22 +119,26 @@ body.profile-page {
   left: 50%;
   transform: translate(-50%, -50%); /* 정확히 중앙 */
   z-index: 1; /* 텍스트 위 */
-  font-size: 18px;
   font-weight: bold;
   text-align: center;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
   backface-visibility: hidden; /* ✅ 텍스트도 뒤집힐 때 안 비치게 */
   -webkit-backface-visibility: hidden;
   pointer-events: none; /* 클릭 방해 X */
+
+  width: 80%; /* 💡 추가: 텍스트 박스 너비 늘리기 */
+  white-space: normal; /* 줄바꿈 허용 */
 }
 
 /* 앞면 글자만 노란색 */
 .card-front .card-text {
+  font-size: 23px;
   color: #ffc000;
 }
 
 /* 뒷면 글자만 검은색 */
 .card-back .card-text {
+  font-size: 16px;
   color: black;
   text-shadow: none; /* 필요하면 그림자도 끔 */
 }
@@ -128,4 +151,41 @@ body.profile-page {
 /* flipped일 때만 180도 회전 */
 .card.flipped .card-inner {
   transform: rotateY(180deg);
+}
+
+.impact-text {
+  font-size: 80px; /* 크기 */
+  font-weight: bold;
+  color: #fafa2d;
+  text-shadow: -4px -4px 0 #20d70c, 4px -4px 0 #20d70c, -4px 4px 0 #20d70c,
+    4px 4px 0 #20d70c;
+  transform: rotate(-10deg);
+  display: block;
+  text-align: center; /* 가운데 정렬 */
+  margin-top: 40px; /* 카드와의 간격 */
+  animation: shake 0.3s infinite;
+  text-decoration: none; /* 밑줄 제거 */
+  cursor: pointer; /* 마우스 올리면 손가락 모양 */
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-10deg) translate(0, 0);
+  }
+  25% {
+    transform: rotate(-10deg) translate(2px, -2px);
+  }
+  50% {
+    transform: rotate(-10deg) translate(-2px, 2px);
+  }
+  75% {
+    transform: rotate(-10deg) translate(2px, 2px);
+  }
+  100% {
+    transform: rotate(-10deg) translate(0, 0);
+  }
+}
+
+.impact-text:hover {
+  color: #dc229e; /* 마우스 올리면 색 조금 바뀜 */
 }
