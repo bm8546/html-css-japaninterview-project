@@ -8,6 +8,7 @@ body.profile-page {
   font-family: sans-serif;
   color: #fff;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .page-header {
