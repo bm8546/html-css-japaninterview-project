@@ -22,6 +22,14 @@
       src="https://kit.fontawesome.com/f3d3ae9b3b.js"
       crossorigin="anonymous"
     ></script>
+
+    <style>
+      body.profile-page {
+        background: #262626;
+        color: #f5f5f5;
+        min-height: 100vh; /* 100dvh 대신 호환성 좋은 값 */
+      }
+    </style>
   </head>
   <body class="profile-page">
     <header class="page-header noto-serif-jp-400">
@@ -40,7 +48,15 @@
     </header>
 
     <section class="title-wrapper">
-      <h1 class="page-title">ｐｒoｆｉlｅ</h1>
+      <div class="title-inner">
+        <img class="title-icon" src="./images/left-icon.png" alt="아이콘" />
+        <h1 class="page-title">ｐｒoｆｉlｅ</h1>
+        <img
+          class="title-icon right"
+          src="./images/right-icon.png"
+          alt="오른쪽 아이콘"
+        />
+      </div>
       <p class="page-subtitle noto-serif-jp-400 noto-serif-jp">
         「加藤の奇妙な冒険」で「加藤」は誰なのか
       </p>
