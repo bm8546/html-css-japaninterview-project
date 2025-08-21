@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="./styles/interview.css" />
     <link rel="stylesheet" href="./styles/profile.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- font awesome(icon) -->
     <script
       src="https://kit.fontawesome.com/f3d3ae9b3b.js"
@@ -45,10 +52,12 @@
       </nav>
     </header>
 
-    <!-- 타이틀 이미지 -->
-    <div class="title-banner">
-      <img src="./images/profile.png" alt="Title Image" />
-    </div>
+    <section class="title-wrapper">
+      <h1 class="page-title">ｐｒoｆｉlｅ</h1>
+      <p class="page-subtitle noto-serif-jp-400 noto-serif-jp">
+        「加藤の奇妙な冒険」で「加藤」は誰なのか
+      </p>
+    </section>
 
     <div class="card-grid">
       <!-- 카드 1~9 -->
@@ -62,7 +71,10 @@
           </div>
           <div class="card-back">
             <img src="./images/card-back.png" alt="뒷면" />
-            <div class="card-text">加藤英治　Kato Eiji</div>
+            <div class="card-text">
+              加藤英治 <br />
+              Kato Eiji
+            </div>
           </div>
         </div>
       </div>
@@ -76,7 +88,7 @@
           </div>
           <div class="card-back">
             <img src="./images/card-back.png" alt="뒷면" />
-            <div class="card-text">1980年　　（45歳）</div>
+            <div class="card-text">1980年（45歳）</div>
           </div>
         </div>
       </div>
@@ -114,11 +126,10 @@
         <div class="card-inner">
           <div class="card-front">
             <img src="./images/card.png" alt="앞면" />
-            <div class="card-text">好きな動物</div>
+            <div class="card-text">knock-knock</div>
           </div>
           <div class="card-back">
-            <img src="./images/card-back.png" alt="뒷면" />
-            <div class="card-text">タヌキ</div>
+            <img src="./images/card1.png" alt="뒷면" />
           </div>
         </div>
       </div>
@@ -133,7 +144,7 @@
           <div class="card-back">
             <img src="./images/card-back.png" alt="뒷면" />
             <div class="card-text">
-              ジムでトレーニング、ランニング、野球観戦（広島東洋カープ、ロッテジャイアンツ）
+              ジムでトレーニング、<br />ランニング、野球観戦<br />（広島東洋カープ、<br />ロッテジャイアンツ）
             </div>
           </div>
         </div>
@@ -144,13 +155,11 @@
         <div class="card-inner">
           <div class="card-front">
             <img src="./images/card.png" alt="앞면" />
-            <div class="card-text">ご家族</div>
+            <div class="card-text">好きな動物</div>
           </div>
           <div class="card-back">
             <img src="./images/card-back.png" alt="뒷면" />
-            <div class="card-text">
-              既婚。高校生と中学生の息子２人。現在は一人で韓国在住。
-            </div>
+            <div class="card-text">タヌキ</div>
           </div>
         </div>
       </div>
@@ -178,11 +187,13 @@
           </div>
           <div class="card-back">
             <img src="./images/card-back.png" alt="뒷면" />
-            <div class="card-text">西面（ソミョン）の機張カルグクス</div>
+            <div class="card-text">西面（ソミョン）<br />機張カルグクス</div>
           </div>
         </div>
       </div>
     </div>
+
+    <a href="interview.html" class="impact-text">YES!YES!YES!</a>
 
     <script>
       document.querySelector(".card-grid").addEventListener("click", (e) => {
