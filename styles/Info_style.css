@@ -52,6 +52,7 @@ body {
   font-style: normal;
 }
 
+
 .title-wrapper .page-subtitle {
   font-size: 2rem;
   margin-top: 25px;
@@ -82,7 +83,7 @@ body {
 }
 
 .intro-text p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.7;
   color: #fff;
 }
@@ -165,6 +166,7 @@ body {
 
 .member-card:hover {
   transform: translateY(-20px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .member-name {
@@ -192,7 +194,7 @@ body {
   line-height: 1.5;
 }
 
-/* 만약 카드뒤집기 하면*/
+/*  카드뒤집기 */
 
 .card-inner {
   position: relative;
@@ -262,15 +264,15 @@ body {
 .project-intro h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #d8a6a6;
+  color: #ffffff;
 }
 
 .project-intro p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #e4c5c5;
+  color: #ffffff;
 }
-
+/* 청해진 사업소개 사진 슬라이드  */
 .mySwiper {
   width: 100%;
   max-width: 800px;
@@ -286,7 +288,7 @@ body {
   object-position: center top; /* 잘릴 때 윗부분 기준으로 */
   border-radius: 10px;
 }
-
+/* 경계선 */
 .section-divider {
   position: relative;
   text-align: center;
@@ -303,7 +305,7 @@ body {
 }
 
 .section-divider::after {
-  content: "◆"; /* 중앙 문양 */
+  content: url(); /* 중앙 문양 */
   position: absolute;
   top: -14px; /* 선 위 살짝 겹치게 */
   left: 50%;
@@ -325,30 +327,35 @@ body {
   display: block;
   height: 1px; /* 얇은 선 */
   width: 80%;
-  background: #1ce497; /* 선 색상 (JOJO 포인트 색상) */
+  background: #59A49E; /* 선 색상 (JOJO 포인트 색상) */
   margin: 0 auto;
 }
 
 .section-divider_1::after {
   content: "♠"; /* 중앙 문양 */
   position: absolute;
-  top: -14px; /* 선 위 살짝 겹치게 */
+  top: -10px; /* 선 위 살짝 겹치게 */
   left: 50%;
   transform: translateX(-50%);
   font-size: 18px; /* 문양 크기 */
-  color: #1ce497; /* 문양 색상 */
+  color: #59A49E ; /* 문양 색상 */
   /*background: #000; /* 배경색 (페이지 배경과 동일하게) */
   padding: 0 8px; /* 문양 주위 배경 여백 */
 }
+
+/*  핑크 강조 */
+span {
+  color: #e2007f;
+}
+
 /* 반응형 설정 모바일*/
 
 @media (max-width: 767px) {
   /* 팀원 카드 1개씩 */
-  .team-members .member-grid {
+   .team-members .member-grid {
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
+   }
   /* 제목·본문 폰트 축소 */
   .page-title {
     font-size: 1.8rem;
