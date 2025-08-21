@@ -2,7 +2,7 @@
 
 /* 전체 배경 및 텍스트 설정 */
 body.profile-page {
-  background-color: black;
+  background: black;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -38,20 +38,30 @@ body.profile-page {
   margin-top: 50px;
 }
 
+.title-wrapper .title-inner {
+  display: flex;
+  align-items: center; /* 세로 가운데 */
+  justify-content: center; /* 전체 중앙 정렬 */
+  gap: 20px; /* 아이콘과 텍스트 사이 간격 */
+}
+
+.title-wrapper .title-icon {
+  width: 40px;
+  height: auto;
+  position: relative;
+  top: 12px; /* 아래로 4px */
+}
+
 .title-wrapper .page-title {
   font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  font-family: "Noto Serif JP", serif;
-  font-optical-sizing: auto;
   font-weight: 700;
-  font-style: normal;
+  font-family: "Noto Serif JP", serif;
+  margin: 0;
 }
 
 .title-wrapper .page-subtitle {
   font-size: 1.5rem;
   margin-top: 25px;
-  text-align: center;
 }
 
 body.profile-page {
