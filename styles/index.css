@@ -2,14 +2,20 @@
 body {
   /* 이 수치를 지정하지않으면 body 콘텐츠와 겹칠 수 있다. */
   padding-top: 120px;
+  background-color: black;
 }
 /*home*/
 
-
-.page-title { margin: 0; line-height: 0; }           /* h2 기본 여백/줄간격 제거 */
-.jojo-logo   { display: block; width: min(45vw,570px); height: auto; margin: 0 auto; } /* 가운데+반응형 */
-
-
+.page-title {
+  margin: 0;
+  line-height: 0;
+} /* h2 기본 여백/줄간격 제거 */
+.jojo-logo {
+  display: block;
+  width: min(45vw, 570px);
+  height: auto;
+  margin: 0 auto;
+} /* 가운데+반응형 */
 
 /*스타트 버튼*/
 .start-container {
