@@ -57,7 +57,17 @@ body {
   margin-top: 25px;
   text-align: center;
 }
-
+.banner-divide {
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center; /* 전체 가운데 정렬 */
+}
+.title-icon {
+  width: 40px;
+  height: auto;
+  position: relative;
+  top: 12px; /* 아래로 4px */
+}
 /* 팀 소개 섹션 */
 .team-intro {
   display: flex;
