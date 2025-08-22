@@ -47,7 +47,7 @@ span {
   padding: 50px 20px;
   margin: 25px 0 80px;
 }
-.banner-devide {
+.banner-divide {
   display: flex;
   align-items: center; /* 세로 중앙 정렬 */
   justify-content: center; /* 전체 가운데 정렬 */
