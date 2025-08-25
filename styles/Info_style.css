@@ -40,7 +40,12 @@ body {
   text-align: center;
   padding: 50px 20px;
   margin-top: 150px;
+    display: flex;
+  flex-direction: column;
+  justify-content: center; /* 세로 가운데 */
+  align-items: center;     /* 가로 가운데 */
 }
+
 
 .title-wrapper .page-title {
   font-size: 4rem;
@@ -54,8 +59,14 @@ body {
 
 .title-wrapper .page-subtitle {
   font-size: 2rem;
-  margin-top: 25px;
-  text-align: center;
+  margin: 10px 0 0;
+  text-align: center;  /* 혹시 덮어씌워지는 경우 대비 */
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+   margin: 10px 0 0;
+  white-space: nowrap; /* 줄바꿈 금지 */
 }
 .banner-divide {
   display: flex;
@@ -274,12 +285,14 @@ body {
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .project-intro p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #ffffff;
+  
 }
 /* 청해진 사업소개 사진 슬라이드  */
 .mySwiper {
@@ -357,29 +370,47 @@ span {
   color: #e2007f;
 }
 
+/* 기본: 줄바꿈 안 보임 */
+.br-mobile {
+  display: none;
+}
+
 /* 반응형 설정 모바일*/
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   /* 팀원 카드 1개씩 */
+  
   .team-members .member-grid {
     display: grid;
     grid-template-columns: 1fr;
+    justify-items: center; /* 카드 중앙 */
   }
-  /* 제목·본문 폰트 축소 */
-  .page-title {
-    font-size: 1.8rem;
+  .member-card {
+    transform: none !important; /* hover 효과 무시 */
   }
+  .member-card:hover {
+    transform: none; /* hover 동작 안 함 */
+  }
+    /* 제목·본문 폰트 축소 */
+  
+  html {
+  font-size: clamp(14px, 2vw, 18px); 
+  /* 최소 14px, 화면 폭에 따라 최대 18px */
+}
 
-  .page-subtitle {
-    font-size: 1rem;
-  }
+.page-title,
+.project-intro h2 {
+  font-size: clamp(2rem, 5vw, 6rem);
+}
 
-  .intro-text h2 {
-    font-size: 1.5rem;
-  }
+.page-subtitle {
+  font-size: clamp(0.8rem, 2vw, 2.5rem);
+}
 
-  .intro-text p {
-    font-size: 0.9rem;
+
+/* 모바일에서만 줄바꿈 */
+  .br-mobile {
+    display: inline;
   }
 
   /* 이미지 전체 폭 */
@@ -406,3 +437,4 @@ span {
     padding: 0 10px;
   }
 }
+

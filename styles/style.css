@@ -19,7 +19,7 @@ img {
 .logo {
   width: 150px;
   margin-top: 12px;
-  margin-left: 20px; /*왼쪽 여백*/
+  margin-left: 12px; /*왼쪽 여백*/
 }
 .main-nav {
   display: flex;
@@ -28,13 +28,14 @@ img {
   margin-top: 34px;
   list-style: none;
 }
-
 nav {
-  padding: 0 40px; /* 좌우에 40px 여백 */
-}
-
-.main-nav li {
-  margin-left: 36px;
+  display: flex;
+  justify-content: space-between; /* 로고 왼쪽, 메뉴 오른쪽 */
+  align-items: center;
+  padding: 0 10px;
+  background-color: #000;
+  white-space: nowrap; /* 줄바꿈 방지 */
+  overflow: hidden; /* 스크롤 없앰 */
 }
 
 .main-nav a {
@@ -116,3 +117,108 @@ nav {
 .footer-contact a:hover {
   text-decoration: underline;
 }
+nav ul {
+  display: flex;
+  justify-content: center; /* 항상 중앙 정렬 */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap; /* 줄바꿈 금지 → 항상 가로줄 고정 */
+}
+
+nav ul li {
+  margin: 0 20px; /* 항목 간격 */
+}
+
+nav ul li a {
+  color: #fff; /* 글자 색상 */
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #aaa; /* hover 색상 */
+}
+
+/* 반응형 조정 */
+@media (max-width: 1024px) {
+  nav ul li {
+    margin: 0 10px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  nav ul li {
+    margin: 0 5px;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+}
+  @media (max-width: 600px) {
+  nav ul {
+    flex-wrap: nowrap; /* 한 줄 유지 */
+  }
+  nav ul li {
+    margin: 0 5px; /* 간격 줄이기 */
+  }
+  nav ul li a {
+    font-size: 12px; /* 글자 크기 더 줄이기 */
+  }
+}
+
+/* 반응형 로고 크기 */
+ @media (max-width: 450px) {
+  .logo {
+    width: 100px;      /* 로고 더 줄이기 */
+    margin-left: 6px;  /* 왼쪽 여백 최소화 */
+    margin-top: 8px;   /* 위 여백도 살짝 줄임 */
+  }
+
+  nav ul li {
+    margin: 0 5px; /* 항목 간격 최소화 */
+  }
+
+  nav ul li a {
+    font-size: clamp(12px, 5vw, 14px); 
+    /* 최소 12px, 화면 폭 따라 자동 조정, 최대 14px */
+  }
+}
+ @media (max-width: 400px) {
+  .logo {
+    width: 100px;      /* 로고 더 줄이기 */
+    margin-left: 5px;  /* 왼쪽 여백 최소화 */
+    margin-top: 8px;   /* 위 여백도 살짝 줄임 */
+  }
+
+  nav ul li {
+    margin: 0 4px; /* 항목 간격 최소화 */
+  }
+
+  nav ul li a {
+    font-size: clamp(11px, 4vw, 13px); 
+    /* 최소 11px, 화면 폭 따라 자동 조정, 최대 13px */
+  }
+}
+  @media (max-width: 350px) {
+  .logo {
+    width: 100px;      /* 로고 더 줄이기 */
+    margin-left: 5px;  /* 왼쪽 여백 최소화 */
+    margin-top: 8px;   /* 위 여백도 살짝 줄임 */
+  }
+
+  nav ul li {
+    margin: 0 3px; /* 항목 간격 최소화 */
+  }
+
+  nav ul li a {
+    font-size: clamp(10px, 3vw, 12px); 
+    /* 최소 10px, 화면 폭 따라 자동 조정, 최대 12px */
+  }
+}
+
