@@ -197,3 +197,30 @@ main,
   /*background: #000; /* 배경색 (페이지 배경과 동일하게) */
   padding: 0 8px; /* 문양 주위 배경 여백 */
 }
+
+.section-divider_2 {
+  position: relative;
+  text-align: center;
+  margin: 1px 0; /* 위아래 여백 */
+}
+
+.section-divider_2::before {
+  content: "";
+  display: block;
+  height: 1px; /* 얇은 선 */
+  width: 80%;
+  background: #fff; /* 선 색상 (JOJO 포인트 색상) */
+  margin: 0 auto;
+}
+
+.section-divider_2::after {
+  content: "♠"; /* 중앙 문양 */
+  position: absolute;
+  top: -13px; /* 선 위 살짝 겹치게 */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px; /* 문양 크기 */
+  color: #fff; /* 문양 색상 */
+  /*background: #000; /* 배경색 (페이지 배경과 동일하게) */
+  padding: 0 8px; /* 문양 주위 배경 여백 */
+}
