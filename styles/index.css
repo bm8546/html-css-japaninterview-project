@@ -149,7 +149,7 @@ main,
 
 /*카드 넘기는 버튼 */
 .kaizen .left,
-.kaizen .right {
+.kaizen button.right {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -161,11 +161,11 @@ main,
 .kaizen .left {
   left: -200px;
 }
-.kaizen .right {
+.kaizen button.right {
   right: -200px;
 }
 .kaizen .left img,
-.kaizen .right img {
+.kaizen button.right img {
   width: 100px;
   height: auto;
 }
