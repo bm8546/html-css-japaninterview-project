@@ -1,25 +1,19 @@
 @charset "UTF-8";
+
+html,
 body {
-  /* 이 수치를 지정하지않으면 body 콘텐츠와 겹칠 수 있다. */
+  height: 100%;
+} /* 2) 바닥에 푸터 밀기 위한 flex 레이아웃 */
+
+body {
   margin: 0;
-  padding-top: 120px;
   background-color: black;
+  padding-top: 120px; /* 헤더가 fixed면 유지 */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-.biz-udpgothic-bold {
-  font-family: "BIZ UDPGothic", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-.noto-serif-jp-400 {
-  font-family: "Noto Serif JP", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-/*  */
+
 main,
 #info,
 .interview-main {
@@ -44,6 +38,13 @@ main,
   margin: 0 auto;
   padding: 12px 16px;
 }
+
+.noto-serif-jp-400 {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 #info {
   flex: 1;
 }
@@ -66,8 +67,7 @@ main,
 .start-container {
   display: flex;
   justify-content: center; /*가로중앙*/
-  margin-top: 350px; /*필요하면 이 값만 조절*/
-  margin-bottom: 80px;
+  margin-top: 350px; /* 필요하면 이 값만 조절 */
   position: relative; /* 배경보다 위에 오도록 */
   z-index: 1; /* 배경(img)보다 위로 */
 }
@@ -75,9 +75,7 @@ main,
   filter: brightness(
     0.7
   ); /*1이 원본이고 값>1 더 밝게, 값<1 더 어둡게/ opacity는 투명도 조절*/
-}
-/*스타트버튼 끝*/
-
+} /*스타트버튼 끝*/
 .home-content.wrapper {
   position: relative;
   flex: 1 0 auto;
@@ -170,11 +168,10 @@ main,
   height: auto;
 }
 
-/* 푸터 위 구분선 */
 .section-divider_1 {
   position: relative;
   text-align: center;
-  margin: 1px 0; /* 위아래 여백 */
+  margin: 70px 0; /* 위아래 여백 */
 }
 
 .section-divider_1::before {
@@ -182,18 +179,18 @@ main,
   display: block;
   height: 1px; /* 얇은 선 */
   width: 80%;
-  background: #59a49e; /* 선 색상 (JOJO 포인트 색상) */
+  background: #fff; /* 선 색상 (JOJO 포인트 색상) */
   margin: 0 auto;
 }
 
 .section-divider_1::after {
   content: "♠"; /* 중앙 문양 */
   position: absolute;
-  top: -10px; /* 선 위 살짝 겹치게 */
+  top: -13px; /* 선 위 살짝 겹치게 */
   left: 50%;
   transform: translateX(-50%);
   font-size: 18px; /* 문양 크기 */
-  color: #59a49e; /* 문양 색상 */
+  color: #fff; /* 문양 색상 */
   /*background: #000; /* 배경색 (페이지 배경과 동일하게) */
   padding: 0 8px; /* 문양 주위 배경 여백 */
 }
