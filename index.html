@@ -216,7 +216,7 @@
         <img class="title-icon" src="./images/left-icon.png" alt="아이콘" />
         <h2 class="kaizen-title noto-serif-jp-400">Gallery</h2>
         <img
-          class="title-icon title-icon-right"
+          class="title-icon right"
           src="./images/right-icon.png"
           alt="오른쪽 아이콘"
         />
@@ -262,7 +262,7 @@
       (() => {
         const track = document.querySelector(".kaizen-track");
         const cards = Array.from(track.querySelectorAll("img"));
-        const btnPrev = document.querySelector(".kaizen button.right");
+        const btnPrev = document.querySelector(".right");
         const btnNext = document.querySelector(".right");
         const total = cards.length;
 
@@ -316,5 +316,6 @@
     </script>
   </body>
 </html>
+
 
 
