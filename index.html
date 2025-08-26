@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>現在、ドウですか？</title>
     <!-- CSS -->
@@ -13,9 +13,8 @@
       crossorigin="anonymous"
     ></script>
   </head>
-<body>
-    
- <header class="page-header noto-serif-jp-400">
+  <body>
+    <header class="page-header noto-serif-jp-400">
       <a href="index.html">
         <img class="logo" src="./images/logo.png" alt="로고 이미지" />
       </a>
@@ -30,123 +29,221 @@
       </nav>
     </header>
 
+    <div class="home-content wrapper">
+      <h2 class="page-title" style="margin: 0; line-height: 0">
+        <svg
+          class="jojo-logo"
+          viewBox="0 0 1600 520"
+          role="img"
+          aria-label="加藤の奇妙な冒険"
+          style="
+            display: block;
+            max-width: 96vw;
+            margin: 0 auto;
+            height: auto;
+            overflow: visible;
+          "
+        >
+          <defs>
+            <!-- 핑크(加藤の) 그라디언트: 흰 영역 넓게 -->
+            <linearGradient id="pinkGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ff198c" />
+              <stop offset="60%" stop-color="#ff86c7" />
+              <stop offset="80%" stop-color="#ffffff" />
+              <stop offset="100%" stop-color="#ffffff" />
+            </linearGradient>
 
-<div class="home-content wrapper">         
-    <img src="./images/background.png" alt="배경">
+            <!-- 레드(奇妙な冒険) 그라디언트 -->
+            <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ff3b30" />
+              <stop offset="60%" stop-color="#e11d1d" />
+              <stop offset="100%" stop-color="#a00000" />
+            </linearGradient>
 
-<h2 class="page-title" style="margin:0;line-height:0">
-  <svg class="jojo-logo"
-       viewBox="0 0 1600 520"
-       role="img"
-       aria-label="加藤の奇妙な冒険"
-       style="display:block;max-width:96vw;margin:0 auto;height:auto;overflow:visible">
-    <defs>
-      <!-- 핑크(加藤の) 그라디언트: 흰 영역 넓게 -->
-      <linearGradient id="pinkGrad" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%"   stop-color="#ff198c"/>
-        <stop offset="60%"  stop-color="#ff86c7"/>
-        <stop offset="80%"  stop-color="#ffffff"/>
-        <stop offset="100%" stop-color="#ffffff"/>
-      </linearGradient>
+            <!-- ↘ 바깥 그림자(잘림 방지: userSpaceOnUse + 넓은 영역) -->
+            <filter
+              id="outShadow"
+              filterUnits="userSpaceOnUse"
+              x="-300"
+              y="-300"
+              width="2400"
+              height="1400"
+            >
+              <feDropShadow
+                dx="18"
+                dy="22"
+                stdDeviation="10"
+                flood-color="#000"
+                flood-opacity="0.45"
+              />
+              <feDropShadow
+                dx="26"
+                dy="30"
+                stdDeviation="20"
+                flood-color="#000"
+                flood-opacity="0.25"
+              />
+            </filter>
 
-      <!-- 레드(奇妙な冒険) 그라디언트 -->
-      <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%"   stop-color="#ff3b30"/>
-        <stop offset="60%"  stop-color="#e11d1d"/>
-        <stop offset="100%" stop-color="#a00000"/>
-      </linearGradient>
+            <!-- 글꼴/각짐/가독 옵션 -->
+            <style>
+              .main {
+                font-family: "Noto Sans JP", "Kozuka Gothic Pro B", sans-serif;
+                font-weight: 900;
+                font-size: 240px;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 20;
+                dominant-baseline: middle;
+                paint-order: stroke fill;
+                shape-rendering: geometricPrecision;
+                letter-spacing: 0.02em;
+              }
+              .sub {
+                font-family: "Noto Sans JP", "Kozuka Gothic Pro B", sans-serif;
+                font-weight: 900;
+                font-size: 170px;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 20;
+                dominant-baseline: middle;
+                paint-order: stroke fill;
+                shape-rendering: geometricPrecision;
+                letter-spacing: 0.02em;
+              }
+            </style>
+          </defs>
 
-      <!-- ↘ 바깥 그림자(잘림 방지: userSpaceOnUse + 넓은 영역) -->
-      <filter id="outShadow" filterUnits="userSpaceOnUse"
-              x="-300" y="-300" width="2400" height="1400">
-        <feDropShadow dx="18" dy="22" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/>
-        <feDropShadow dx="26" dy="30" stdDeviation="20" flood-color="#000" flood-opacity="0.25"/>
-      </filter>
+          <!-- 전체 기울기 + 그림자 -->
+          <g
+            transform="translate(0,-80) skewX(-16)"
+            filter="url(#outShadow)"
+            style="overflow: visible"
+          >
+            <!-- ① 메인: 「加藤の」 (핑크) -->
+            <!-- 엑스트루전(입체) -->
+            <g transform="translate(120,230) scale(0.85) translate(-120,-230)">
+              <g fill="#000" opacity=".85">
+                <text class="main" x="120" y="230" transform="translate(6,6)">
+                  加藤の
+                </text>
+                <text class="main" x="120" y="230" transform="translate(12,12)">
+                  加藤の
+                </text>
+                <text class="main" x="120" y="230" transform="translate(18,18)">
+                  加藤の
+                </text>
+              </g>
+              <!-- 검정 외곽선 -->
+              <text
+                class="main"
+                x="120"
+                y="230"
+                fill="none"
+                stroke="#000"
+                stroke-width="26"
+              >
+                加藤の
+              </text>
+              <!-- 흰 인너라인(두께 조절 포인트) -->
+              <text
+                class="main"
+                x="120"
+                y="230"
+                fill="none"
+                stroke="#fff"
+                stroke-width="7"
+              >
+                加藤の
+              </text>
+              <!-- 핑크 채움 -->
+              <text class="main" x="120" y="230" fill="url(#pinkGrad)">
+                加藤の
+              </text>
+            </g>
 
-      <!-- 글꼴/각짐/가독 옵션 -->
-      <style>
-        .main{
-          font-family:"Noto Sans JP","Kozuka Gothic Pro B",sans-serif;
-          font-weight:900;
-          font-size:240px;
-          stroke-linejoin:miter; stroke-miterlimit:20;
-          dominant-baseline:middle;
-          paint-order:stroke fill;
-          shape-rendering:geometricPrecision;
-          letter-spacing:.02em;
-        }
-        .sub{
-          font-family:"Noto Sans JP","Kozuka Gothic Pro B",sans-serif;
-          font-weight:900;
-          font-size:170px;
-          stroke-linejoin:miter; stroke-miterlimit:20;
-          dominant-baseline:middle;
-          paint-order:stroke fill;
-          shape-rendering:geometricPrecision;
-          letter-spacing:.02em;
-        }
-      </style>
-    </defs>
+            <!-- ② 서브: 「奇妙な冒険」 (레드) -->
+            <g transform="translate(760,320)">
+              <!-- 엑스트루전 -->
+              <g transform="scale(1.20)">
+                <g fill="#000" opacity=".85">
+                  <text class="sub" x="0" y="0" transform="translate(4,4)">
+                    奇妙な冒険
+                  </text>
+                  <text class="sub" x="0" y="0" transform="translate(8,8)">
+                    奇妙な冒険
+                  </text>
+                </g>
+                <!-- 검정 외곽선 -->
+                <text
+                  class="sub"
+                  x="0"
+                  y="0"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="20"
+                >
+                  奇妙な冒険
+                </text>
+                <!-- 흰 인너라인(두께 조절 포인트) -->
+                <text
+                  class="sub"
+                  x="0"
+                  y="0"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="8"
+                >
+                  奇妙な冒険
+                </text>
+                <!-- 레드 채움 -->
+                <text class="sub" x="0" y="0" fill="url(#redGrad)">
+                  奇妙な冒険
+                </text>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </h2>
 
-    <!-- 전체 기울기 + 그림자 -->
-    <g transform="translate(0,-80) skewX(-16)" filter="url(#outShadow)" style="overflow:visible">
+      <div class="start-container">
+        <a class="button" href="profile.html"
+          ><img class="start" src="./images/start.png" alt="스타트"
+        /></a>
+      </div>
 
-      <!-- ① 메인: 「加藤の」 (핑크) -->
-      <!-- 엑스트루전(입체) -->
-         <g transform="translate(120,230) scale(0.85) translate(-120,-230)">
-      <g fill="#000" opacity=".85">
-        <text class="main" x="120" y="230" transform="translate(6,6)">加藤の</text>
-        <text class="main" x="120" y="230" transform="translate(12,12)">加藤の</text>
-        <text class="main" x="120" y="230" transform="translate(18,18)">加藤の</text>
-      </g>
-      <!-- 검정 외곽선 -->
-      <text class="main" x="120" y="230" fill="none" stroke="#000" stroke-width="26">加藤の</text>
-      <!-- 흰 인너라인(두께 조절 포인트) -->
-      <text class="main" x="120" y="230" fill="none" stroke="#fff" stroke-width="7">加藤の</text>
-      <!-- 핑크 채움 -->
-      <text class="main" x="120" y="230" fill="url(#pinkGrad)">加藤の</text>
- </g>
+      <div class="section-divider_1 biz-udpgothic-bold"></div>
 
+      <div class="title-inner">
+        <img class="title-icon" src="./images/left-icon.png" alt="아이콘" />
+        <h2 class="kaizen-title noto-serif-jp-400">Gallery</h2>
+        <img
+          class="title-icon right"
+          src="./images/right-icon.png"
+          alt="오른쪽 아이콘"
+        />
+      </div>
 
-      <!-- ② 서브: 「奇妙な冒険」 (레드) -->
-      <g transform="translate(760,320)">
-        <!-- 엑스트루전 -->
-          <g transform="scale(1.20)"> 
-        <g fill="#000" opacity=".85">
-          <text class="sub" x="0" y="0" transform="translate(4,4)">奇妙な冒険</text>
-          <text class="sub" x="0" y="0" transform="translate(8,8)">奇妙な冒険</text>
-        </g>
-        <!-- 검정 외곽선 -->
-        <text class="sub" x="0" y="0" fill="none" stroke="#000" stroke-width="20">奇妙な冒険</text>
-        <!-- 흰 인너라인(두께 조절 포인트) -->
-        <text class="sub" x="0" y="0" fill="none" stroke="#fff" stroke-width="8">奇妙な冒険</text>
-        <!-- 레드 채움 -->
-        <text class="sub" x="0" y="0" fill="url(#redGrad)">奇妙な冒険</text>
-      </g>
-    </g>
-  </svg>
-</h2>
-
-    <!--3D캐러셀-->
-    <div class="kaizen">
-        <button class="left"><img src="./images/left.png" alt="이전"></button>
+      <!--3D캐러셀-->
+      <div class="kaizen">
+        <button class="left"><img src="./images/left.png" alt="이전" /></button>
         <div class="kaizen-track">
-            <img src="./images/大学時代.JPEG" alt="1권">
-            <img src="./images/ギリシャ出張.JPEG" alt="2권">
-            <img src="./images/野球のコーチしていたとき.JPEG"  alt="3권">
-            <img src="./images/韓国での仕事①.JPEG" alt="12권">
-            <img src="./images/慶州旅行.JPEG" alt="16권">
-            <img src="./images/韓国での仕事②.JPEG" alt="17권">
-            
+          <img src="./images/大学時代.JPEG" alt="1권" />
+          <img src="./images/ギリシャ出張.JPEG" alt="2권" />
+          <img src="./images/野球のコーチしていたとき.JPEG" alt="3권" />
+          <img src="./images/韓国での仕事①.JPEG" alt="12권" />
+          <img src="./images/慶州旅行.JPEG" alt="16권" />
+          <img src="./images/韓国での仕事②.JPEG" alt="17권" />
+          <img src="./images/kakao1.jpg" alt="사진" />
+          <img src="./images/kakao2.jpg" alt="oo" />
+          <img src="./images/kakao3.jpg" alt="oo" />
+          <img src="./images/kakao4.jpg" alt="oo" />
         </div>
-        <button class="right"><img src="./images/right.png" alt="다음"></button>
+        <button class="right">
+          <img src="./images/right.png" alt="다음" />
+        </button>
+      </div>
     </div>
-    <div class="start-container">
-            <a class="button" href="profile.html"><img class="start" src="./images/start.png" alt="스타트"></a>
-    </div>
-</div>
 
-<div class="section-divider_1 biz-udpgothic-bold"></div>
+    <div class="section-divider_1 biz-udpgothic-bold"></div>
     <footer class="program-footer">
       <div class="footer-container">
         <p class="footer-copy">
@@ -161,69 +258,61 @@
       </div>
     </footer>
 
-<script>
-(() => {
-   const track = document.querySelector('.kaizen-track');
-  const cards = Array.from(track.querySelectorAll('img'));
-  const btnPrev = document.querySelector('.left');
-  const btnNext = document.querySelector('.right');
-  const total = cards.length;
+    <script>
+      (() => {
+        const track = document.querySelector(".kaizen-track");
+        const cards = Array.from(track.querySelectorAll("img"));
+        const btnPrev = document.querySelector(".left");
+        const btnNext = document.querySelector(".right");
+        const total = cards.length;
 
-  if (!track || cards.length === 0 || !btnPrev || !btnNext) {
-    console.warn('요소를 찾을 수 없습니다.');
-    return;
-  }
+        if (!track || cards.length === 0 || !btnPrev || !btnNext) {
+          console.warn("요소를 찾을 수 없습니다.");
+          return;
+        }
 
-  let index = 0;
+        let index = 0;
 
-function placeCards() {
-  cards.forEach((img, i) => {
-    const offset = (i - index + total) % total;
+        function placeCards() {
+          cards.forEach((img, i) => {
+            const offset = (i - index + total) % total;
 
-    if (offset === 0) {
-      // 중앙 카드
-      img.style.transform = `translate(-50%, -50%) translateX(0) scale(1)`;
-      img.style.opacity = 1;
-      img.style.zIndex = 3;
+            if (offset === 0) {
+              // 중앙 카드
+              img.style.transform = `translate(-50%, -50%) translateX(0) scale(1)`;
+              img.style.opacity = 1;
+              img.style.zIndex = 3;
+            } else if (offset === 1 || offset === -(total - 1)) {
+              // 오른쪽 카드
+              img.style.transform = `translate(-50%, -50%) translateX(250px) scale(0.9) rotateY(45deg)`;
+              img.style.opacity = 0.8;
+              img.style.zIndex = 2;
+            } else if (offset === total - 1 || offset === -1) {
+              // 왼쪽 카드
+              img.style.transform = `translate(-50%, -50%) translateX(-250px) scale(0.9) rotateY(-45deg)`;
+              img.style.opacity = 0.8;
+              img.style.zIndex = 2;
+            } else {
+              // 숨김(중앙 기준 유지한 채 투명)
+              img.style.transform = `translate(-50%, -50%) scale(0.8)`;
+              img.style.opacity = 0;
+              img.style.zIndex = 1;
+            }
+          });
+        }
 
-    } else if (offset === 1 || offset === -(total - 1)) {
-      // 오른쪽 카드
-      img.style.transform = `translate(-50%, -50%) translateX(250px) scale(0.9) rotateY(45deg)`;
-      img.style.opacity = 0.8;
-      img.style.zIndex = 2;
+        placeCards();
 
-    } else if (offset === total - 1 || offset === -1) {
-      // 왼쪽 카드
-      img.style.transform = `translate(-50%, -50%) translateX(-250px) scale(0.9) rotateY(-45deg)`;
-      img.style.opacity = 0.8;
-      img.style.zIndex = 2;
+        btnNext.addEventListener("click", () => {
+          index = (index + 1) % total;
+          placeCards();
+        });
 
-    } else {
-      // 숨김(중앙 기준 유지한 채 투명)
-      img.style.transform = `translate(-50%, -50%) scale(0.8)`;
-      img.style.opacity = 0;
-      img.style.zIndex = 1;
-    }
-  });
-}
-  
- placeCards();
-
-  btnNext.addEventListener('click', () => {
-    index = (index + 1) % total;
-    placeCards();
-  });
-
-  btnPrev.addEventListener('click', () => {
-    index = (index - 1 + total) % total;
-    placeCards();
-  });
-})();
-
-</script>
-
-</body>
+        btnPrev.addEventListener("click", () => {
+          index = (index - 1 + total) % total;
+          placeCards();
+        });
+      })();
+    </script>
+  </body>
 </html>
-
-
-
